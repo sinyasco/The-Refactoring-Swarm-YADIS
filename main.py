@@ -18,12 +18,14 @@ from src.judge import Judge
 # Load environment variables FIRST
 load_dotenv()
 
+# Constants
+MAX_ITER = 10
+
 
 @dataclass
 class Config:
     """Configuration for the refactoring system."""
     target_dir: str
-    max_iter: int
     gemini_key: str
 
 
@@ -239,7 +241,7 @@ def build_workflow(config: Config) -> StateGraph:
     return workflow.compile()
 
 
-def process_file(workflow: StateGraph, file_path: str, max_iter: int) -> bool:
+def process_file(workflow: StateGraph, file_path: str) -> bool:
     """Process a single file through the refactoring workflow."""
     print(f"\n{'='*60}")
     print(f"📄 Processing: {file_path}")
@@ -249,7 +251,7 @@ def process_file(workflow: StateGraph, file_path: str, max_iter: int) -> bool:
         "file_path": file_path,
         "plan": None,
         "iteration": 1,
-        "max_iter": max_iter,
+        "max_iter": MAX_ITER,
         "success": False,
         "test_logs": "",
         "error": None
@@ -262,7 +264,7 @@ def process_file(workflow: StateGraph, file_path: str, max_iter: int) -> bool:
             print(f"\n✅ Success: {file_path} passed all tests")
             return True
         else:
-            print(f"\n⚠️  Warning: {file_path} could not be fixed after {max_iter} iterations")
+            print(f"\n⚠️  Warning: {file_path} could not be fixed after {MAX_ITER} iterations")
             if final_state.get("error"):
                 print(f"   Last error: {final_state['error']}")
             return False
@@ -288,19 +290,12 @@ def main():
         required=True,
         help="Directory containing Python files to refactor"
     )
-    parser.add_argument(
-        "--max_iter",
-        type=int,
-        default=3,
-        help="Maximum self-healing iterations per file (default: 3)"
-    )
     args = parser.parse_args()
     
     # Validate environment and setup
     gemini_key = validate_environment()
     config = Config(
         target_dir=args.target_dir,
-        max_iter=args.max_iter,
         gemini_key=gemini_key
     )
     
@@ -313,7 +308,7 @@ def main():
     
     print(f"\n🚀 REFACTORING SWARM STARTED")
     print(f"   Target: {config.target_dir}")
-    print(f"   Max iterations: {config.max_iter}")
+    print(f"   Max iterations: {MAX_ITER}")
     
     # Discover files to process
     py_files = discover_python_files(config.target_dir)
@@ -325,7 +320,7 @@ def main():
     # Process each file
     results = []
     for file_path in py_files:
-        success = process_file(workflow, file_path, config.max_iter)
+        success = process_file(workflow, file_path)
         results.append((file_path, success))
     
     # Print summary
