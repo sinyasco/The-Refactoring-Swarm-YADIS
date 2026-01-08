@@ -19,5 +19,53 @@
             "output_response": "Target: sandbox"
         },
         "status": "SUCCESS"
+    },
+    {
+        "id": "86faf2a5-c242-49d2-9aad-d263cf6edc42",
+        "timestamp": "2026-01-04T23:38:16.166594",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e1994f75-f708-4647-9f44-cf8b3608e87a",
+        "timestamp": "2026-01-05T21:29:50.752047",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "014da68e-5127-4c7f-8df0-4b744114f359",
+        "timestamp": "2026-01-08T19:26:59.188582",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "8241fd43-cd36-4369-9b2b-12ced7b9fdc5",
+        "timestamp": "2026-01-08T19:27:46.383593",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
     }
 ]
