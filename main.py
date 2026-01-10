@@ -109,7 +109,7 @@ def create_auditor_node(config: Config):
 
 def create_fixer_node(config: Config):
     """Create the Fixer agent node."""
-    fixer = Fixer()
+    fixer = Fixer(config.gemini_key)
     
     def fixer_node(state: AgentState) -> AgentState:
         """Apply the refactoring plan to the file."""
@@ -149,7 +149,7 @@ def create_fixer_node(config: Config):
 
 def create_judge_node(config: Config):
     """Create the Judge agent node."""
-    judge = Judge()
+    judge = Judge(config.gemini_key)
     
     def judge_node(state: AgentState) -> AgentState:
         """Run tests and validate the refactored code."""
