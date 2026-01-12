@@ -21,7 +21,6 @@ load_dotenv()
 # Constants
 MAX_ITER = 10
 
-
 @dataclass
 class Config:
     """Configuration for the refactoring system."""
@@ -94,7 +93,7 @@ def create_auditor_node(config: Config):
             print(f"  ❌ {error_msg}")
             log_experiment(
                 "Auditor", "Gemini", ActionType.ANALYSIS,
-                {"input_prompt": f"Analyze {state['file_path']}", "error": error_msg},
+                {"input_prompt": f"Analyze {state['file_path']}", "output_response": error_msg},
                 "FAILURE"
             )
             return {
@@ -135,7 +134,7 @@ def create_fixer_node(config: Config):
             print(f"  ❌ {error_msg}")
             log_experiment(
                 "Fixer", "Gemini", ActionType.FIX,
-                {"input_prompt": f"Apply fix", "error": error_msg},
+                {"input_prompt": f"Apply fix", "output_response": error_msg},
                 "FAILURE"
             )
             return {
@@ -177,7 +176,7 @@ def create_judge_node(config: Config):
             print(f"  ❌ {error_msg}")
             log_experiment(
                 "Judge", "None", ActionType.DEBUG,
-                {"input_prompt": f"Run tests", "error": error_msg},
+                {"input_prompt": f"Run tests", "output_response": error_msg},
                 "FAILURE"
             )
             return {
@@ -272,7 +271,7 @@ def process_file(workflow: StateGraph, file_path: str) -> bool:
         print(f"\n❌ Error processing {file_path}: {str(e)}")
         log_experiment(
             "System", "None", ActionType.DEBUG,
-            {"input_prompt": f"Process {file_path}", "error": str(e)},
+            {"input_prompt": f"Process {file_path}", "output_response": str(e)},
             "FAILURE"
         )
         return False

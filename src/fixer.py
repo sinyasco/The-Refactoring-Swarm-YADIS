@@ -26,7 +26,7 @@ class Fixer:
         full_prompt = f"{prompt_template}\n\nOriginal Python file:\n{original_code}\n\nRefactoring plan:\n{plan_json}"
         
         # Initialize Gemini LLM
-        llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=self.gemini_key)
+        llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=self.gemini_key)
         
         # Get response
         response = llm.invoke(full_prompt)

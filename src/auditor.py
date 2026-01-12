@@ -20,7 +20,7 @@ class Auditor:
         full_prompt = f"{prompt_template}\n\nPython code to analyze:\n{code_content}"
         
         # Initialize Gemini LLM
-        llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=gemini_key)
+        llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=gemini_key)
         
         # Get response
         response = llm.invoke(full_prompt)
