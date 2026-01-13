@@ -67,5 +67,89 @@
             "output_response": "Target: sandbox"
         },
         "status": "SUCCESS"
+    },
+    {
+        "id": "deb22fcb-543d-4350-9884-35ff8dab3f77",
+        "timestamp": "2026-01-12T17:15:58.190785",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "0761cab1-3726-48b7-9006-a25e3d4d1a0c",
+        "timestamp": "2026-01-12T22:01:00.023961",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "644faba7-fa2e-4601-91ee-ab78ff7f0bfe",
+        "timestamp": "2026-01-12T22:06:03.566028",
+        "agent": "Auditor",
+        "model": "Gemini",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\check_setup.py",
+            "output_response": "Auditor failed: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "fd0a2e3d-ccec-4e5e-a8b5-bff69096c455",
+        "timestamp": "2026-01-12T22:11:07.179981",
+        "agent": "Auditor",
+        "model": "Gemini",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\check_setup.py",
+            "output_response": "Auditor failed: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "6663ad85-f005-4c28-a6b7-18548a3ce67e",
+        "timestamp": "2026-01-12T22:16:23.824672",
+        "agent": "Auditor",
+        "model": "Gemini",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\check_setup.py",
+            "output_response": "Auditor failed: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "be06eb72-bea4-401b-bcd1-9cbc86850c23",
+        "timestamp": "2026-01-12T22:16:24.119044",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Process C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\check_setup.py",
+            "output_response": "Recursion limit of 25 reachedwithout hitting a stop condition. You can increase the limitby setting the `recursion_limit` config key."
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "04e7cae2-faaa-4560-89c5-04bd49154c2e",
+        "timestamp": "2026-01-12T22:44:27.239118",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS"
+        },
+        "status": "SUCCESS"
     }
 ]
