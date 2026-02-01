@@ -4,7 +4,7 @@ import os
 PYTHON_VERSION_MAJOR = 3
 PYTHON_VERSION_MINOR = [10, 11]
 ENV_FILE = ".env"
-API_KEY_VARIABLE = "GOOGLE_API_KEY"
+API_KEY_VARIABLE = "GROQ_API_KEY"
 LOGS_DIR = "logs"
 
 def check_environment():
