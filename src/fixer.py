@@ -1,14 +1,14 @@
 import json
 import os
-from langchain_google_genai import ChatGoogleGenerativeAI
+from groq import Groq
 
 class Fixer:
-    def __init__(self, gemini_key):
-        self.gemini_key = gemini_key
+    def __init__(self, groq_key):
+        self.groq_key = groq_key
     
     def apply_fix(self, plan):
         """
-        Applies fixes to the Python file based on the refactoring plan using Gemini AI.
+        Applies fixes to the Python file based on the refactoring plan using Groq AI.
         """
         file_path = plan["file"]
         
@@ -25,12 +25,35 @@ class Fixer:
         plan_json = json.dumps(plan, indent=2)
         full_prompt = f"{prompt_template}\n\nOriginal Python file:\n{original_code}\n\nRefactoring plan:\n{plan_json}"
         
-        # Initialize Gemini LLM
-        llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=self.gemini_key)
+        # Initialize Groq client
+        client = Groq(api_key=self.groq_key)
         
-        # Get response
-        response = llm.invoke(full_prompt)
-        fixed_code = response.content.strip()
+        # Get response from Groq
+        chat_completion = client.chat.completions.create(
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a helpful code refactoring assistant. Return only the fixed Python code without any explanations, markdown formatting, or additional text. Just pure Python code."
+                },
+                {
+                    "role": "user",
+                    "content": full_prompt
+                }
+            ],
+            model="llama-3.3-70b-versatile",  # Fast and capable model
+            temperature=0.1,
+            max_tokens=4096
+        )
+        
+        fixed_code = chat_completion.choices[0].message.content.strip()
+        
+        # Remove markdown code blocks if present
+        if fixed_code.startswith("```python"):
+            fixed_code = fixed_code.split("```python", 1)[1]
+            fixed_code = fixed_code.rsplit("```", 1)[0].strip()
+        elif fixed_code.startswith("```"):
+            fixed_code = fixed_code.split("```", 1)[1]
+            fixed_code = fixed_code.rsplit("```", 1)[0].strip()
         
         # Write the fixed code back to the file
         with open(file_path, 'w', encoding='utf-8') as f:
