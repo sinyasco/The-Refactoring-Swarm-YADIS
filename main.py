@@ -3,6 +3,7 @@ Refactoring Swarm Orchestrator
 Multi-agent system for automated code refactoring with self-healing capabilities.
 """
 import argparse
+import time
 import sys
 import os
 from dataclasses import dataclass
@@ -19,13 +20,13 @@ from src.judge import Judge
 load_dotenv()
 
 # Constants
-MAX_ITER = 10
+MAX_ITER = 10  # Maximum iterations as specified (stops early if successful)
 
 @dataclass
 class Config:
     """Configuration for the refactoring system."""
     target_dir: str
-    gemini_key: str
+    groq_key: str
 
 
 class AgentState(TypedDict):
@@ -41,12 +42,13 @@ class AgentState(TypedDict):
 
 def validate_environment() -> str:
     """Validate that required environment variables are set."""
-    gemini_key = os.getenv("GOOGLE_API_KEY")
-    if not gemini_key:
-        print("❌ Error: GOOGLE_API_KEY not found in environment variables")
-        print("   Please create a .env file with: GOOGLE_API_KEY=your_key_here")
+    groq_key = os.getenv("GROQ_API_KEY")
+    if not groq_key:
+        print("❌ Error: GROQ_API_KEY not found in environment variables")
+        print("   Please create a .env file with: GROQ_API_KEY=your_key_here")
+        print("   Get your free API key at: https://console.groq.com/keys")
         sys.exit(1)
-    return gemini_key
+    return groq_key
 
 
 def discover_python_files(target_dir: str) -> list[str]:
@@ -73,12 +75,14 @@ def create_auditor_node(config: Config):
     
     def auditor_node(state: AgentState) -> AgentState:
         """Analyze the file and create a refactoring plan."""
+        print(f"\n  🔍 Auditor analyzing (iteration {state['iteration']}/{state['max_iter']})...")
+        time.sleep(2)
+
         try:
-            print(f"  🔍 Auditor analyzing: {state['file_path']}")
-            plan = auditor.analyze(state["file_path"], gemini_key=config.gemini_key)
+            plan = auditor.analyze(state["file_path"], groq_key=config.groq_key)
             
             log_experiment(
-                "Auditor", "Gemini", ActionType.ANALYSIS,
+                "Auditor", "Groq", ActionType.ANALYSIS,
                 {"input_prompt": f"Analyze {state['file_path']}", "output_response": str(plan)},
                 "SUCCESS"
             )
@@ -92,7 +96,7 @@ def create_auditor_node(config: Config):
             error_msg = f"Auditor failed: {str(e)}"
             print(f"  ❌ {error_msg}")
             log_experiment(
-                "Auditor", "Gemini", ActionType.ANALYSIS,
+                "Auditor", "Groq", ActionType.ANALYSIS,
                 {"input_prompt": f"Analyze {state['file_path']}", "output_response": error_msg},
                 "FAILURE"
             )
@@ -108,19 +112,22 @@ def create_auditor_node(config: Config):
 
 def create_fixer_node(config: Config):
     """Create the Fixer agent node."""
-    fixer = Fixer(config.gemini_key)
+    fixer = Fixer(config.groq_key)
     
     def fixer_node(state: AgentState) -> AgentState:
         """Apply the refactoring plan to the file."""
         if state.get("error") or not state.get("plan"):
-            return state  # Skip if previous step failed
+            print(f"  ⏭️  Fixer skipped (previous error)")
+            return state
         
+        print(f"  🔧 Fixer applying changes...")
+        time.sleep(2)
+
         try:
-            print(f"  🔧 Fixer applying changes...")
             fixer.apply_fix(state["plan"])
             
             log_experiment(
-                "Fixer", "Gemini", ActionType.FIX,
+                "Fixer", "Groq", ActionType.FIX,
                 {"input_prompt": f"Apply plan to {state['plan']['file']}", "output_response": str(state['plan'])},
                 "SUCCESS"
             )
@@ -133,7 +140,7 @@ def create_fixer_node(config: Config):
             error_msg = f"Fixer failed: {str(e)}"
             print(f"  ❌ {error_msg}")
             log_experiment(
-                "Fixer", "Gemini", ActionType.FIX,
+                "Fixer", "Groq", ActionType.FIX,
                 {"input_prompt": f"Apply fix", "output_response": error_msg},
                 "FAILURE"
             )
@@ -148,16 +155,25 @@ def create_fixer_node(config: Config):
 
 def create_judge_node(config: Config):
     """Create the Judge agent node."""
-    judge = Judge(config.gemini_key)
+    judge = Judge(config.groq_key)
     
     def judge_node(state: AgentState) -> AgentState:
         """Run tests and validate the refactored code."""
         if state.get("error"):
-            return state  # Skip if previous step failed
+            print(f"  ⏭️  Judge skipped (previous error)")
+            return state
         
+        print(f"  ⚖️  Judge running tests...")
+
         try:
-            print(f"  ⚖️  Judge running tests (iteration {state['iteration']})...")
             success, test_logs = judge.run_tests(state["file_path"])
+            
+            if success:
+                print(f"  ✅ Tests PASSED!")
+            else:
+                print(f"  ❌ Tests FAILED")
+                # Show a preview of the error
+                print(f"     Preview: {test_logs[:200]}...")
             
             log_experiment(
                 "Judge", "None", ActionType.DEBUG,
@@ -191,23 +207,33 @@ def create_judge_node(config: Config):
 
 def should_retry(state: AgentState) -> Literal["retry", "end"]:
     """Determine if the workflow should retry or end."""
-    if state["success"]:
+    # Success - we're done!
+    if state.get("success", False):
         return "end"
     
+    # Hit max iterations - stop
     if state["iteration"] >= state["max_iter"]:
-        print(f"  ⚠️  Max iterations ({state['max_iter']}) reached")
+        print(f"\n  ⛔ Stopping: Max iterations ({state['max_iter']}) reached")
         return "end"
     
-    print(f"  🔄 Retrying... (iteration {state['iteration'] + 1}/{state['max_iter']})")
+    # Fatal error (not just test failure) - stop
+    error = state.get("error", "")
+    if error and error != "Tests failed":
+        print(f"\n  ⛔ Stopping: Fatal error detected")
+        return "end"
+    
+    # Otherwise, retry
+    print(f"\n  🔄 Retrying...")
     return "retry"
 
 
 def increment_iteration(state: AgentState) -> AgentState:
     """Increment the iteration counter for retry."""
+    new_iteration = state["iteration"] + 1
     return {
         **state,
-        "iteration": state["iteration"] + 1,
-        "error": None  # Clear error for retry
+        "iteration": new_iteration,
+        "error": None  # Clear error to allow retry
     }
 
 
@@ -240,7 +266,7 @@ def build_workflow(config: Config) -> StateGraph:
     return workflow.compile()
 
 
-def process_file(workflow: StateGraph, file_path: str) -> bool:
+def process_file(workflow: StateGraph, file_path: str, max_iter: int) -> bool:
     """Process a single file through the refactoring workflow."""
     print(f"\n{'='*60}")
     print(f"📄 Processing: {file_path}")
@@ -250,25 +276,40 @@ def process_file(workflow: StateGraph, file_path: str) -> bool:
         "file_path": file_path,
         "plan": None,
         "iteration": 1,
-        "max_iter": MAX_ITER,
+        "max_iter": max_iter,
         "success": False,
         "test_logs": "",
         "error": None
     }
     
     try:
-        final_state = workflow.invoke(initial_state)
+        # Set recursion limit high enough for the workflow
+        # Formula: (max_iter * nodes_per_iteration) + buffer
+        # Each iteration: auditor -> fixer -> judge -> increment = 4 nodes
+        recursion_limit = 100
+        
+        print(f"  ℹ️  Recursion limit set to: {recursion_limit}")
+        
+        final_state = workflow.invoke(
+            initial_state,
+            config={"recursion_limit": recursion_limit}
+        )
         
         if final_state["success"]:
-            print(f"\n✅ Success: {file_path} passed all tests")
+            print(f"\n✅ SUCCESS: {file_path} passed all tests!")
             return True
         else:
-            print(f"\n⚠️  Warning: {file_path} could not be fixed after {MAX_ITER} iterations")
-            if final_state.get("error"):
-                print(f"   Last error: {final_state['error']}")
+            print(f"\n⚠️  INCOMPLETE: {file_path} did not pass tests after {max_iter} iterations")
+            if final_state.get("test_logs"):
+                print(f"\n📋 Final test output:")
+                print(final_state['test_logs'][:500])
+                if len(final_state['test_logs']) > 500:
+                    print("... (truncated)")
             return False
+            
     except Exception as e:
-        print(f"\n❌ Error processing {file_path}: {str(e)}")
+        print(f"\n❌ ERROR: Failed to process {file_path}")
+        print(f"   Error: {str(e)}")
         log_experiment(
             "System", "None", ActionType.DEBUG,
             {"input_prompt": f"Process {file_path}", "output_response": str(e)},
@@ -289,13 +330,19 @@ def main():
         required=True,
         help="Directory containing Python files to refactor"
     )
+    parser.add_argument(
+        "--max_iter",
+        type=int,
+        default=MAX_ITER,
+        help=f"Maximum iterations per file (default: {MAX_ITER})"
+    )
     args = parser.parse_args()
     
     # Validate environment and setup
-    gemini_key = validate_environment()
+    groq_key = validate_environment()
     config = Config(
         target_dir=args.target_dir,
-        gemini_key=gemini_key
+        groq_key=groq_key
     )
     
     # Log system startup
@@ -305,26 +352,35 @@ def main():
         "SUCCESS"
     )
     
-    print(f"\n🚀 REFACTORING SWARM STARTED")
-    print(f"   Target: {config.target_dir}")
-    print(f"   Max iterations: {MAX_ITER}")
+    print(f"\n{'='*60}")
+    print(f"🚀 REFACTORING SWARM STARTED")
+    print(f"{'='*60}")
+    print(f"   Target directory: {config.target_dir}")
+    print(f"   Max iterations per file: {args.max_iter}")
+    print(f"   AI Provider: Groq API (Ultra-fast)")
+    print(f"{'='*60}")
     
     # Discover files to process
     py_files = discover_python_files(config.target_dir)
-    print(f"   Found {len(py_files)} Python file(s)")
+    print(f"\n   📂 Found {len(py_files)} Python file(s)")
+    
+    if not py_files:
+        print("\n⚠️  No files to process. Exiting.")
+        sys.exit(0)
     
     # Build workflow graph
     workflow = build_workflow(config)
     
     # Process each file
     results = []
-    for file_path in py_files:
-        success = process_file(workflow, file_path)
+    for i, file_path in enumerate(py_files, 1):
+        print(f"\n[File {i}/{len(py_files)}]")
+        success = process_file(workflow, file_path, args.max_iter)
         results.append((file_path, success))
     
     # Print summary
     print(f"\n{'='*60}")
-    print("📊 SUMMARY")
+    print("📊 FINAL SUMMARY")
     print(f"{'='*60}")
     
     successful = sum(1 for _, success in results if success)
@@ -334,8 +390,10 @@ def main():
         status = "✅" if success else "❌"
         print(f"  {status} {os.path.basename(file_path)}")
     
-    print(f"\n  Total: {successful}/{total} files successfully refactored")
-    print(f"\n✅ MISSION COMPLETE")
+    print(f"\n{'='*60}")
+    print(f"  Success Rate: {successful}/{total} files ({100*successful//total if total > 0 else 0}%)")
+    print(f"{'='*60}")
+    print(f"\n{'✅ MISSION COMPLETE' if successful == total else '⚠️  MISSION INCOMPLETE'}")
     
     # Exit with appropriate code
     sys.exit(0 if successful == total else 1)
