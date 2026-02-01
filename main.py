@@ -21,6 +21,7 @@ load_dotenv()
 
 # Constants
 MAX_ITER = 10  # Maximum iterations as specified (stops early if successful)
+RECURSION_LIMIT_BUFFER = 100  # Buffer for recursion limit
 
 @dataclass
 class Config:
@@ -286,7 +287,7 @@ def process_file(workflow: StateGraph, file_path: str, max_iter: int) -> bool:
         # Set recursion limit high enough for the workflow
         # Formula: (max_iter * nodes_per_iteration) + buffer
         # Each iteration: auditor -> fixer -> judge -> increment = 4 nodes
-        recursion_limit = 100
+        recursion_limit = (max_iter * 4) + RECURSION_LIMIT_BUFFER
         
         print(f"  ℹ️  Recursion limit set to: {recursion_limit}")
         

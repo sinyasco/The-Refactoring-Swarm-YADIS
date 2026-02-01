@@ -151,5 +151,569 @@
             "output_response": "Target: C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS"
         },
         "status": "SUCCESS"
+    },
+    {
+        "id": "72f89255-5f7a-40b3-94d8-0d3535cbf01b",
+        "timestamp": "2026-01-13T22:03:33.625193",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "a51d0f3e-cd4a-40f3-b0ac-aaece98d24e6",
+        "timestamp": "2026-01-29T12:41:27.003796",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "1873392e-50f7-4d34-9638-d603f9cc4ed9",
+        "timestamp": "2026-01-29T12:46:31.770757",
+        "agent": "Auditor",
+        "model": "Gemini",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\check_setup.py",
+            "output_response": "Auditor failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "a1771fb8-0e6a-4b21-a1a6-d77890471fd3",
+        "timestamp": "2026-01-29T12:51:34.945629",
+        "agent": "Auditor",
+        "model": "Gemini",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\check_setup.py",
+            "output_response": "Auditor failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "61565357-f7f1-4c51-817b-119258b98ae2",
+        "timestamp": "2026-01-29T12:56:38.332816",
+        "agent": "Auditor",
+        "model": "Gemini",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\check_setup.py",
+            "output_response": "Auditor failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "2a8dea6d-87f2-40aa-9f19-1de1eb2bac7d",
+        "timestamp": "2026-01-29T12:56:38.568987",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Process C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\check_setup.py",
+            "output_response": "Recursion limit of 25 reachedwithout hitting a stop condition. You can increase the limitby setting the `recursion_limit` config key."
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "f9e9879d-192b-479f-bf0a-a7f34ea4ce68",
+        "timestamp": "2026-01-29T13:01:41.795250",
+        "agent": "Auditor",
+        "model": "Gemini",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\main.py",
+            "output_response": "Auditor failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "110ed70c-3b3c-43cf-bad7-e9d6d15214d2",
+        "timestamp": "2026-01-29T13:06:45.166093",
+        "agent": "Auditor",
+        "model": "Gemini",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\main.py",
+            "output_response": "Auditor failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "15282eec-1a34-4707-b27f-cfc2e65ae231",
+        "timestamp": "2026-01-29T14:00:13.337654",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "474f4e47-e5b0-4ddf-8283-8ec788db9c76",
+        "timestamp": "2026-01-29T14:29:48.221872",
+        "agent": "Auditor",
+        "model": "Gemini",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\check_setup.py",
+            "output_response": "Auditor failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. "
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "498f056a-f408-4621-990a-f6732cd80b28",
+        "timestamp": "2026-01-30T23:14:04.559196",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "1eaa0598-0682-48c0-a2f0-e3896dc520d0",
+        "timestamp": "2026-01-30T23:14:09.237118",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\check_setup.py",
+            "output_response": "{'issues': [{'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 5, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 14, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 20, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 26, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 32, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 38, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 44, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 50, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Function does not handle potential exceptions', 'line': 10, 'suggested_fix': 'Add try-except blocks to handle potential exceptions'}, {'type': 'style', 'description': 'File is not closed in case of an exception', 'line': 24, 'suggested_fix': 'Use a with statement to ensure the file is closed'}, {'type': 'style', 'description': 'Magic strings used in the code', 'line': 15, 'suggested_fix': 'Define constants for magic strings'}, {'type': 'style', 'description': 'Magic strings used in the code', 'line': 25, 'suggested_fix': 'Define constants for magic strings'}], 'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\check_setup.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "63c860cc-23e8-413a-b2dc-2d5c5517a7f1",
+        "timestamp": "2026-01-30T23:14:12.524738",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\check_setup.py",
+            "output_response": "{'issues': [{'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 5, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 14, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 20, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 26, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 32, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 38, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 44, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Non-ASCII characters used in print statements', 'line': 50, 'suggested_fix': 'Use ASCII characters for better compatibility'}, {'type': 'style', 'description': 'Function does not handle potential exceptions', 'line': 10, 'suggested_fix': 'Add try-except blocks to handle potential exceptions'}, {'type': 'style', 'description': 'File is not closed in case of an exception', 'line': 24, 'suggested_fix': 'Use a with statement to ensure the file is closed'}, {'type': 'style', 'description': 'Magic strings used in the code', 'line': 15, 'suggested_fix': 'Define constants for magic strings'}, {'type': 'style', 'description': 'Magic strings used in the code', 'line': 25, 'suggested_fix': 'Define constants for magic strings'}], 'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\check_setup.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "602a42bb-0f9b-45ef-843e-88f2c4beb3d9",
+        "timestamp": "2026-01-30T23:14:13.817714",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\check_setup.py",
+            "output_response": "✅ No unit tests found, but check_setup.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "9fbd4403-8258-43e8-a45d-0cd75cecb07a",
+        "timestamp": "2026-01-30T23:14:17.448468",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\main.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Potential infinite recursion in workflow invocation', 'line': None, 'suggested_fix': 'Review the workflow graph construction and invocation to prevent potential infinite recursion'}, {'type': 'style', 'description': 'Long lines of code exceed recommended maximum length', 'line': None, 'suggested_fix': 'Refactor long lines of code to improve readability and adhere to coding standards'}, {'type': 'logic', 'description': 'Uncaught exceptions in workflow nodes may cause unexpected behavior', 'line': None, 'suggested_fix': 'Implement robust error handling mechanisms in workflow nodes to handle unexpected exceptions'}, {'type': 'style', 'description': 'Magic numbers and hardcoded values are used in the code', 'line': None, 'suggested_fix': 'Replace magic numbers and hardcoded values with named constants or configurable variables'}, {'type': 'logic', 'description': 'Potential resource leaks due to unclosed files or connections', 'line': None, 'suggested_fix': 'Ensure that files and connections are properly closed after use to prevent resource leaks'}], 'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\main.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "08765af1-112e-4860-9379-c489af420996",
+        "timestamp": "2026-01-30T23:14:26.212948",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\main.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Potential infinite recursion in workflow invocation', 'line': None, 'suggested_fix': 'Review the workflow graph construction and invocation to prevent potential infinite recursion'}, {'type': 'style', 'description': 'Long lines of code exceed recommended maximum length', 'line': None, 'suggested_fix': 'Refactor long lines of code to improve readability and adhere to coding standards'}, {'type': 'logic', 'description': 'Uncaught exceptions in workflow nodes may cause unexpected behavior', 'line': None, 'suggested_fix': 'Implement robust error handling mechanisms in workflow nodes to handle unexpected exceptions'}, {'type': 'style', 'description': 'Magic numbers and hardcoded values are used in the code', 'line': None, 'suggested_fix': 'Replace magic numbers and hardcoded values with named constants or configurable variables'}, {'type': 'logic', 'description': 'Potential resource leaks due to unclosed files or connections', 'line': None, 'suggested_fix': 'Ensure that files and connections are properly closed after use to prevent resource leaks'}], 'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\main.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d4e1c826-a641-467d-be18-49110c1de1db",
+        "timestamp": "2026-01-30T23:14:26.936859",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\main.py",
+            "output_response": "✅ No unit tests found, but main.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "4cad66a4-3c2b-4cbd-b535-4cd6dada3e67",
+        "timestamp": "2026-01-30T23:34:35.074138",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ab2efd56-45f1-4646-88ab-c7da96000121",
+        "timestamp": "2026-01-30T23:34:42.756764",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code1.py",
+            "output_response": "{'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\corrupt_codes\\\\code1.py', 'issues': [], 'error': 'Failed to parse response'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "438b0cd3-e886-436a-95f0-07fd8b87fcae",
+        "timestamp": "2026-01-30T23:34:49.353172",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code1.py",
+            "output_response": "{'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\corrupt_codes\\\\code1.py', 'issues': [], 'error': 'Failed to parse response'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c613da66-28ba-476d-ac4f-2dfad29109b4",
+        "timestamp": "2026-01-30T23:34:50.125411",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code1.py",
+            "output_response": "✅ No unit tests found, but code1.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "9a9bf8e6-46fa-40f4-99f0-5d79f15c91f7",
+        "timestamp": "2026-01-30T23:34:56.830786",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code2.py",
+            "output_response": "{'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\corrupt_codes\\\\code2.py', 'issues': [], 'error': 'Failed to parse response'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "fb046618-a3c4-4791-9f34-17b330ac6553",
+        "timestamp": "2026-01-30T23:35:01.638412",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code2.py",
+            "output_response": "{'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\corrupt_codes\\\\code2.py', 'issues': [], 'error': 'Failed to parse response'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c23c4ca4-7fb0-420c-9feb-bf8c56ad19b3",
+        "timestamp": "2026-01-30T23:35:02.241229",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code2.py",
+            "output_response": "✅ No unit tests found, but code2.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c9f3918d-e49f-4c6e-9081-dc3cce4099b5",
+        "timestamp": "2026-01-30T23:35:13.888837",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code3.py",
+            "output_response": "{'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\corrupt_codes\\\\code3.py', 'issues': [], 'error': 'Failed to parse response'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "098bc418-28a8-4ed9-954f-c864cef132c2",
+        "timestamp": "2026-01-30T23:35:24.830645",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code3.py",
+            "output_response": "{'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\corrupt_codes\\\\code3.py', 'issues': [], 'error': 'Failed to parse response'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "a8a52e79-1b1b-4e65-bca5-be0be63ddac0",
+        "timestamp": "2026-01-30T23:35:25.363005",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code3.py",
+            "output_response": "✅ No unit tests found, but code3.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "03bfa812-e093-4fdf-89aa-2b16b84eccb0",
+        "timestamp": "2026-01-30T23:36:21.198205",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "45db33b3-360c-4061-a311-087e2fe7b2f6",
+        "timestamp": "2026-01-30T23:36:27.723540",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code1.py",
+            "output_response": "{'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\corrupt_codes\\\\code1.py', 'issues': [], 'error': 'Failed to parse response'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ae9373ff-fe61-4863-9f31-62601da9ccf2",
+        "timestamp": "2026-01-30T23:36:33.402259",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code1.py",
+            "output_response": "{'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\corrupt_codes\\\\code1.py', 'issues': [], 'error': 'Failed to parse response'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f5d8d876-a355-4c09-a3b3-047cee0b98fd",
+        "timestamp": "2026-01-30T23:36:33.890571",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code1.py",
+            "output_response": "✅ No unit tests found, but code1.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "782443bc-8273-420a-a2b7-f17e71e1d6d7",
+        "timestamp": "2026-01-30T23:36:39.800897",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code2.py",
+            "output_response": "{'issues': [{'type': 'syntax', 'description': 'Missing colon after function definition', 'line': 8, 'suggested_fix': 'Add a colon at the end of the function definition'}, {'type': 'syntax', 'description': 'Missing closing parenthesis', 'line': 12, 'suggested_fix': 'Add a closing parenthesis at the end of the print statement'}, {'type': 'style', 'description': 'Inconsistent indentation', 'line': 15, 'suggested_fix': 'Use consistent indentation throughout the code'}, {'type': 'logic', 'description': 'Shadowing built-in function', 'line': 20, 'suggested_fix': 'Avoid using built-in function names as variable names'}, {'type': 'logic', 'description': 'Undefined variables', 'line': 27, 'suggested_fix': 'Define variables before using them'}, {'type': 'logic', 'description': 'Missing argument', 'line': 33, 'suggested_fix': 'Provide all required arguments when calling a function'}, {'type': 'logic', 'description': 'Type confusion', 'line': 38, 'suggested_fix': 'Ensure consistent data types when performing operations'}, {'type': 'logic', 'description': 'Infinite recursion', 'line': 43, 'suggested_fix': 'Add a base case to prevent infinite recursion'}, {'type': 'logic', 'description': 'Index out of range', 'line': 48, 'suggested_fix': 'Check array indices before accessing them'}, {'type': 'logic', 'description': 'Key not found', 'line': 50, 'suggested_fix': 'Check if a key exists in a dictionary before accessing it'}, {'type': 'logic', 'description': 'File handling error', 'line': 54, 'suggested_fix': 'Use a try-except block when handling files'}, {'type': 'syntax', 'description': 'Invalid exception handling syntax', 'line': 61, 'suggested_fix': 'Use the correct syntax for exception handling'}, {'type': 'syntax', 'description': 'Invalid return statement', 'line': 65, 'suggested_fix': 'Use return statements within functions only'}, {'type': 'logic', 'description': 'Class definition error', 'line': 70, 'suggested_fix': 'Define classes correctly with a colon and indentation'}, {'type': 'logic', 'description': 'Mutable default argument', 'line': 84, 'suggested_fix': 'Avoid using mutable default arguments'}, {'type': 'syntax', 'description': 'Invalid boolean logic', 'line': 91, 'suggested_fix': 'Use the correct syntax for boolean logic'}, {'type': 'logic', 'description': 'Infinite loop', 'line': 96, 'suggested_fix': 'Use a correct loop condition to prevent infinite loops'}, {'type': 'syntax', 'description': 'Invalid for loop syntax', 'line': 101, 'suggested_fix': 'Use the correct syntax for for loops'}, {'type': 'syntax', 'description': 'Invalid lambda function', 'line': 105, 'suggested_fix': 'Use the correct syntax for lambda functions'}, {'type': 'logic', 'description': 'Invalid unpacking', 'line': 108, 'suggested_fix': 'Use the correct number of variables when unpacking'}, {'type': 'logic', 'description': 'Bytes and string confusion', 'line': 111, 'suggested_fix': 'Use the correct data type when concatenating strings and bytes'}, {'type': 'logic', 'description': 'Function overwriting', 'line': 115, 'suggested_fix': 'Avoid overwriting function names with variables'}, {'type': 'logic', 'description': 'Async misuse', 'line': 120, 'suggested_fix': 'Use async functions correctly with await'}, {'type': 'syntax', 'description': 'Invalid list comprehension', 'line': 125, 'suggested_fix': 'Use the correct syntax for list comprehensions'}, {'type': 'syntax', 'description': 'Invalid dictionary definition', 'line': 128, 'suggested_fix': 'Use the correct syntax for dictionaries'}, {'type': 'syntax', 'description': 'Invalid comparison', 'line': 132, 'suggested_fix': 'Use the correct syntax for comparisons'}, {'type': 'logic', 'description': 'Global variable misuse', 'line': 136, 'suggested_fix': 'Use global variables correctly with the global keyword'}, {'type': 'syntax', 'description': 'Invalid import statement', 'line': 141, 'suggested_fix': 'Use the correct syntax for import statements'}, {'type': 'logic', 'description': 'Generator error', 'line': 145, 'suggested_fix': 'Use generators correctly with yield'}, {'type': 'logic', 'description': 'StopIteration misuse', 'line': 150, 'suggested_fix': 'Use StopIteration correctly in generators'}, {'type': 'logic', 'description': 'JSON usage error', 'line': 153, 'suggested_fix': 'Use JSON correctly with valid data'}, {'type': 'logic', 'description': 'Tuple mutation error', 'line': 157, 'suggested_fix': 'Use tuples correctly as immutable data structures'}, {'type': 'syntax', 'description': 'Comparison vs assignment confusion', 'line': 160, 'suggested_fix': 'Use the correct operator for comparisons and assignments'}, {'type': 'logic', 'description': 'None usage error', 'line': 163, 'suggested_fix': 'Use None correctly as a placeholder for missing values'}, {'type': 'logic', 'description': 'Range misuse', 'line': 166, 'suggested_fix': 'Use ranges correctly with valid indices'}, {'type': 'syntax', 'description': 'Invalid escape sequence', 'line': 169, 'suggested_fix': 'Use valid escape sequences in strings'}, {'type': 'syntax', 'description': 'Invalid main guard', 'line': 172, 'suggested_fix': 'Use the correct syntax for the main guard'}, {'type': 'logic', 'description': 'Inconsistent return types', 'line': 176, 'suggested_fix': 'Use consistent return types in functions'}, {'type': 'logic', 'description': 'Endless loop', 'line': 181, 'suggested_fix': 'Use a correct loop condition to prevent endless loops'}, {'type': 'logic', 'description': 'Undefined function', 'line': 187, 'suggested_fix': 'Define functions before using them'}], 'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\corrupt_codes\\\\code2.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "8fda3cfa-c97d-4904-bd4f-42e0fd13884d",
+        "timestamp": "2026-01-30T23:36:49.072907",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code2.py",
+            "output_response": "{'issues': [{'type': 'syntax', 'description': 'Missing colon after function definition', 'line': 8, 'suggested_fix': 'Add a colon at the end of the function definition'}, {'type': 'syntax', 'description': 'Missing closing parenthesis', 'line': 12, 'suggested_fix': 'Add a closing parenthesis at the end of the print statement'}, {'type': 'style', 'description': 'Inconsistent indentation', 'line': 15, 'suggested_fix': 'Use consistent indentation throughout the code'}, {'type': 'logic', 'description': 'Shadowing built-in function', 'line': 20, 'suggested_fix': 'Avoid using built-in function names as variable names'}, {'type': 'logic', 'description': 'Undefined variables', 'line': 27, 'suggested_fix': 'Define variables before using them'}, {'type': 'logic', 'description': 'Missing argument', 'line': 33, 'suggested_fix': 'Provide all required arguments when calling a function'}, {'type': 'logic', 'description': 'Type confusion', 'line': 38, 'suggested_fix': 'Ensure consistent data types when performing operations'}, {'type': 'logic', 'description': 'Infinite recursion', 'line': 43, 'suggested_fix': 'Add a base case to prevent infinite recursion'}, {'type': 'logic', 'description': 'Index out of range', 'line': 48, 'suggested_fix': 'Check array indices before accessing them'}, {'type': 'logic', 'description': 'Key not found', 'line': 50, 'suggested_fix': 'Check if a key exists in a dictionary before accessing it'}, {'type': 'logic', 'description': 'File handling error', 'line': 54, 'suggested_fix': 'Use a try-except block when handling files'}, {'type': 'syntax', 'description': 'Invalid exception handling syntax', 'line': 61, 'suggested_fix': 'Use the correct syntax for exception handling'}, {'type': 'syntax', 'description': 'Invalid return statement', 'line': 65, 'suggested_fix': 'Use return statements within functions only'}, {'type': 'logic', 'description': 'Class definition error', 'line': 70, 'suggested_fix': 'Define classes correctly with a colon and indentation'}, {'type': 'logic', 'description': 'Mutable default argument', 'line': 84, 'suggested_fix': 'Avoid using mutable default arguments'}, {'type': 'syntax', 'description': 'Invalid boolean logic', 'line': 91, 'suggested_fix': 'Use the correct syntax for boolean logic'}, {'type': 'logic', 'description': 'Infinite loop', 'line': 96, 'suggested_fix': 'Use a correct loop condition to prevent infinite loops'}, {'type': 'syntax', 'description': 'Invalid for loop syntax', 'line': 101, 'suggested_fix': 'Use the correct syntax for for loops'}, {'type': 'syntax', 'description': 'Invalid lambda function', 'line': 105, 'suggested_fix': 'Use the correct syntax for lambda functions'}, {'type': 'logic', 'description': 'Invalid unpacking', 'line': 108, 'suggested_fix': 'Use the correct number of variables when unpacking'}, {'type': 'logic', 'description': 'Bytes and string confusion', 'line': 111, 'suggested_fix': 'Use the correct data type when concatenating strings and bytes'}, {'type': 'logic', 'description': 'Function overwriting', 'line': 115, 'suggested_fix': 'Avoid overwriting function names with variables'}, {'type': 'logic', 'description': 'Async misuse', 'line': 120, 'suggested_fix': 'Use async functions correctly with await'}, {'type': 'syntax', 'description': 'Invalid list comprehension', 'line': 125, 'suggested_fix': 'Use the correct syntax for list comprehensions'}, {'type': 'syntax', 'description': 'Invalid dictionary definition', 'line': 128, 'suggested_fix': 'Use the correct syntax for dictionaries'}, {'type': 'syntax', 'description': 'Invalid comparison', 'line': 132, 'suggested_fix': 'Use the correct syntax for comparisons'}, {'type': 'logic', 'description': 'Global variable misuse', 'line': 136, 'suggested_fix': 'Use global variables correctly with the global keyword'}, {'type': 'syntax', 'description': 'Invalid import statement', 'line': 141, 'suggested_fix': 'Use the correct syntax for import statements'}, {'type': 'logic', 'description': 'Generator error', 'line': 145, 'suggested_fix': 'Use generators correctly with yield'}, {'type': 'logic', 'description': 'StopIteration misuse', 'line': 150, 'suggested_fix': 'Use StopIteration correctly in generators'}, {'type': 'logic', 'description': 'JSON usage error', 'line': 153, 'suggested_fix': 'Use JSON correctly with valid data'}, {'type': 'logic', 'description': 'Tuple mutation error', 'line': 157, 'suggested_fix': 'Use tuples correctly as immutable data structures'}, {'type': 'syntax', 'description': 'Comparison vs assignment confusion', 'line': 160, 'suggested_fix': 'Use the correct operator for comparisons and assignments'}, {'type': 'logic', 'description': 'None usage error', 'line': 163, 'suggested_fix': 'Use None correctly as a placeholder for missing values'}, {'type': 'logic', 'description': 'Range misuse', 'line': 166, 'suggested_fix': 'Use ranges correctly with valid indices'}, {'type': 'syntax', 'description': 'Invalid escape sequence', 'line': 169, 'suggested_fix': 'Use valid escape sequences in strings'}, {'type': 'syntax', 'description': 'Invalid main guard', 'line': 172, 'suggested_fix': 'Use the correct syntax for the main guard'}, {'type': 'logic', 'description': 'Inconsistent return types', 'line': 176, 'suggested_fix': 'Use consistent return types in functions'}, {'type': 'logic', 'description': 'Endless loop', 'line': 181, 'suggested_fix': 'Use a correct loop condition to prevent endless loops'}, {'type': 'logic', 'description': 'Undefined function', 'line': 187, 'suggested_fix': 'Define functions before using them'}], 'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\corrupt_codes\\\\code2.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "09a261cd-b2b8-45ac-8150-b9708d530a0c",
+        "timestamp": "2026-01-30T23:36:49.643807",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code2.py",
+            "output_response": "✅ No unit tests found, but code2.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "fde94eef-388a-4773-bb95-2d3a2c4417aa",
+        "timestamp": "2026-01-30T23:37:01.688392",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code3.py",
+            "output_response": "{'issues': [{'type': 'syntax', 'description': 'Missing colon after function definition', 'line': 11, 'suggested_fix': 'Add a colon at the end of the function definition'}, {'type': 'syntax', 'description': 'Unterminated string literal', 'line': 14, 'suggested_fix': 'Close the string literal with a quote'}, {'type': 'style', 'description': 'Inconsistent indentation', 'line': 17, 'suggested_fix': 'Use consistent indentation throughout the code'}, {'type': 'style', 'description': 'Unused import', 'line': 4, 'suggested_fix': 'Remove unused imports'}, {'type': 'logic', 'description': 'Shadowing built-in function', 'line': 25, 'suggested_fix': 'Avoid using built-in function names as variable names'}, {'type': 'logic', 'description': 'Undefined variable', 'line': 33, 'suggested_fix': 'Define the variable before using it'}, {'type': 'logic', 'description': 'Incorrect conditional statement', 'line': 43, 'suggested_fix': 'Review the conditional statement logic'}, {'type': 'logic', 'description': 'Infinite loop', 'line': 53, 'suggested_fix': 'Review the loop condition to avoid infinite loops'}, {'type': 'style', 'description': 'Function argument chaos', 'line': 63, 'suggested_fix': 'Use consistent function argument passing style'}, {'type': 'logic', 'description': 'Type mismatch', 'line': 71, 'suggested_fix': 'Ensure correct data types are used'}, {'type': 'logic', 'description': 'Broken class definition', 'line': 81, 'suggested_fix': 'Review the class definition and methods'}, {'type': 'logic', 'description': 'Attribute error', 'line': 93, 'suggested_fix': 'Ensure correct attribute access'}, {'type': 'logic', 'description': 'Dictionary and list misuse', 'line': 101, 'suggested_fix': 'Review dictionary and list operations'}, {'type': 'logic', 'description': 'File handling error', 'line': 111, 'suggested_fix': 'Handle file operations correctly'}, {'type': 'logic', 'description': 'Exception handling disaster', 'line': 123, 'suggested_fix': 'Review exception handling mechanisms'}, {'type': 'logic', 'description': 'Return chaos', 'line': 133, 'suggested_fix': 'Review function return types and values'}, {'type': 'style', 'description': 'Lambda function misuse', 'line': 139, 'suggested_fix': 'Use lambda functions judiciously'}, {'type': 'logic', 'description': 'Generator abuse', 'line': 145, 'suggested_fix': 'Review generator usage'}, {'type': 'logic', 'description': 'Global and local variable confusion', 'line': 155, 'suggested_fix': 'Use global and local variables correctly'}, {'type': 'logic', 'description': 'Async misuse', 'line': 163, 'suggested_fix': 'Review async and await usage'}, {'type': 'logic', 'description': 'Bad comparison', 'line': 171, 'suggested_fix': 'Review comparison operations'}, {'type': 'logic', 'description': 'Comprehension error', 'line': 177, 'suggested_fix': 'Review list comprehension usage'}, {'type': 'logic', 'description': 'Tuple and set abuse', 'line': 183, 'suggested_fix': 'Review tuple and set operations'}, {'type': 'logic', 'description': 'Unicode and encoding error', 'line': 191, 'suggested_fix': 'Handle Unicode and encoding correctly'}, {'type': 'logic', 'description': 'Wrong imports and usage', 'line': 195, 'suggested_fix': 'Review import statements and usage'}, {'type': 'logic', 'description': 'Logical bug', 'line': 203, 'suggested_fix': 'Review logical operations'}, {'type': 'logic', 'description': 'Endless recursion', 'line': 213, 'suggested_fix': 'Review recursive function calls'}, {'type': 'style', 'description': 'Broken main guard', 'line': 223, 'suggested_fix': 'Review the main guard'}, {'type': 'logic', 'description': 'Final fatal call', 'line': 231, 'suggested_fix': 'Review the final function call'}], 'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\corrupt_codes\\\\code3.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c9d0e73a-31ff-4c4d-9846-831b4c9a2356",
+        "timestamp": "2026-01-30T23:37:18.459389",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code3.py",
+            "output_response": "{'issues': [{'type': 'syntax', 'description': 'Missing colon after function definition', 'line': 11, 'suggested_fix': 'Add a colon at the end of the function definition'}, {'type': 'syntax', 'description': 'Unterminated string literal', 'line': 14, 'suggested_fix': 'Close the string literal with a quote'}, {'type': 'style', 'description': 'Inconsistent indentation', 'line': 17, 'suggested_fix': 'Use consistent indentation throughout the code'}, {'type': 'style', 'description': 'Unused import', 'line': 4, 'suggested_fix': 'Remove unused imports'}, {'type': 'logic', 'description': 'Shadowing built-in function', 'line': 25, 'suggested_fix': 'Avoid using built-in function names as variable names'}, {'type': 'logic', 'description': 'Undefined variable', 'line': 33, 'suggested_fix': 'Define the variable before using it'}, {'type': 'logic', 'description': 'Incorrect conditional statement', 'line': 43, 'suggested_fix': 'Review the conditional statement logic'}, {'type': 'logic', 'description': 'Infinite loop', 'line': 53, 'suggested_fix': 'Review the loop condition to avoid infinite loops'}, {'type': 'style', 'description': 'Function argument chaos', 'line': 63, 'suggested_fix': 'Use consistent function argument passing style'}, {'type': 'logic', 'description': 'Type mismatch', 'line': 71, 'suggested_fix': 'Ensure correct data types are used'}, {'type': 'logic', 'description': 'Broken class definition', 'line': 81, 'suggested_fix': 'Review the class definition and methods'}, {'type': 'logic', 'description': 'Attribute error', 'line': 93, 'suggested_fix': 'Ensure correct attribute access'}, {'type': 'logic', 'description': 'Dictionary and list misuse', 'line': 101, 'suggested_fix': 'Review dictionary and list operations'}, {'type': 'logic', 'description': 'File handling error', 'line': 111, 'suggested_fix': 'Handle file operations correctly'}, {'type': 'logic', 'description': 'Exception handling disaster', 'line': 123, 'suggested_fix': 'Review exception handling mechanisms'}, {'type': 'logic', 'description': 'Return chaos', 'line': 133, 'suggested_fix': 'Review function return types and values'}, {'type': 'style', 'description': 'Lambda function misuse', 'line': 139, 'suggested_fix': 'Use lambda functions judiciously'}, {'type': 'logic', 'description': 'Generator abuse', 'line': 145, 'suggested_fix': 'Review generator usage'}, {'type': 'logic', 'description': 'Global and local variable confusion', 'line': 155, 'suggested_fix': 'Use global and local variables correctly'}, {'type': 'logic', 'description': 'Async misuse', 'line': 163, 'suggested_fix': 'Review async and await usage'}, {'type': 'logic', 'description': 'Bad comparison', 'line': 171, 'suggested_fix': 'Review comparison operations'}, {'type': 'logic', 'description': 'Comprehension error', 'line': 177, 'suggested_fix': 'Review list comprehension usage'}, {'type': 'logic', 'description': 'Tuple and set abuse', 'line': 183, 'suggested_fix': 'Review tuple and set operations'}, {'type': 'logic', 'description': 'Unicode and encoding error', 'line': 191, 'suggested_fix': 'Handle Unicode and encoding correctly'}, {'type': 'logic', 'description': 'Wrong imports and usage', 'line': 195, 'suggested_fix': 'Review import statements and usage'}, {'type': 'logic', 'description': 'Logical bug', 'line': 203, 'suggested_fix': 'Review logical operations'}, {'type': 'logic', 'description': 'Endless recursion', 'line': 213, 'suggested_fix': 'Review recursive function calls'}, {'type': 'style', 'description': 'Broken main guard', 'line': 223, 'suggested_fix': 'Review the main guard'}, {'type': 'logic', 'description': 'Final fatal call', 'line': 231, 'suggested_fix': 'Review the final function call'}], 'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\corrupt_codes\\\\code3.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "57d9c83b-7de7-47da-9062-75017e77a5d0",
+        "timestamp": "2026-01-30T23:37:18.967351",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code3.py",
+            "output_response": "❌ Syntax Error: invalid syntax (code3.py, line 13)"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "20c860f4-7cec-4770-966a-17645c4b4e5b",
+        "timestamp": "2026-01-30T23:37:28.862248",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code3.py",
+            "output_response": "{'issues': [{'type': 'syntax', 'description': 'Missing colon after function definition', 'line': 11, 'suggested_fix': 'Add a colon at the end of the function definition'}, {'type': 'syntax', 'description': 'Invalid syntax in print statement', 'line': 14, 'suggested_fix': 'Remove the colon after the print statement'}, {'type': 'style', 'description': 'Inconsistent indentation', 'line': 17, 'suggested_fix': 'Use consistent indentation throughout the code'}, {'type': 'style', 'description': 'Unused import', 'line': 3, 'suggested_fix': 'Remove unused imports'}, {'type': 'logic', 'description': 'Undefined variable', 'line': 43, 'suggested_fix': 'Define the variable before using it'}, {'type': 'style', 'description': 'Shadowing built-in function', 'line': 25, 'suggested_fix': 'Use a different variable name to avoid shadowing'}, {'type': 'logic', 'description': 'Infinite recursion', 'line': 533, 'suggested_fix': 'Add a base case to the recursive function'}, {'type': 'style', 'description': 'Unused variable', 'line': 49, 'suggested_fix': 'Remove unused variables'}, {'type': 'logic', 'description': 'Incorrect function argument order', 'line': 123, 'suggested_fix': 'Pass arguments in the correct order'}, {'type': 'style', 'description': 'Missing error handling', 'line': 163, 'suggested_fix': 'Add try-except blocks to handle potential errors'}, {'type': 'logic', 'description': 'Incorrect conditional statement', 'line': 191, 'suggested_fix': 'Use the correct conditional statement'}, {'type': 'style', 'description': 'Unused function', 'line': 221, 'suggested_fix': 'Remove unused functions'}, {'type': 'logic', 'description': 'Incorrect loop logic', 'line': 251, 'suggested_fix': 'Use the correct loop logic'}, {'type': 'style', 'description': 'Inconsistent naming convention', 'line': 281, 'suggested_fix': 'Use a consistent naming convention throughout the code'}, {'type': 'logic', 'description': 'Incorrect dictionary access', 'line': 313, 'suggested_fix': 'Use the correct dictionary access method'}, {'type': 'style', 'description': 'Missing docstrings', 'line': 1, 'suggested_fix': 'Add docstrings to functions and classes'}], 'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\corrupt_codes\\\\code3.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b10582eb-ded5-4dfe-8375-e876c22f458f",
+        "timestamp": "2026-01-30T23:37:43.672877",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code3.py",
+            "output_response": "{'issues': [{'type': 'syntax', 'description': 'Missing colon after function definition', 'line': 11, 'suggested_fix': 'Add a colon at the end of the function definition'}, {'type': 'syntax', 'description': 'Invalid syntax in print statement', 'line': 14, 'suggested_fix': 'Remove the colon after the print statement'}, {'type': 'style', 'description': 'Inconsistent indentation', 'line': 17, 'suggested_fix': 'Use consistent indentation throughout the code'}, {'type': 'style', 'description': 'Unused import', 'line': 3, 'suggested_fix': 'Remove unused imports'}, {'type': 'logic', 'description': 'Undefined variable', 'line': 43, 'suggested_fix': 'Define the variable before using it'}, {'type': 'style', 'description': 'Shadowing built-in function', 'line': 25, 'suggested_fix': 'Use a different variable name to avoid shadowing'}, {'type': 'logic', 'description': 'Infinite recursion', 'line': 533, 'suggested_fix': 'Add a base case to the recursive function'}, {'type': 'style', 'description': 'Unused variable', 'line': 49, 'suggested_fix': 'Remove unused variables'}, {'type': 'logic', 'description': 'Incorrect function argument order', 'line': 123, 'suggested_fix': 'Pass arguments in the correct order'}, {'type': 'style', 'description': 'Missing error handling', 'line': 163, 'suggested_fix': 'Add try-except blocks to handle potential errors'}, {'type': 'logic', 'description': 'Incorrect conditional statement', 'line': 191, 'suggested_fix': 'Use the correct conditional statement'}, {'type': 'style', 'description': 'Unused function', 'line': 221, 'suggested_fix': 'Remove unused functions'}, {'type': 'logic', 'description': 'Incorrect loop logic', 'line': 251, 'suggested_fix': 'Use the correct loop logic'}, {'type': 'style', 'description': 'Inconsistent naming convention', 'line': 281, 'suggested_fix': 'Use a consistent naming convention throughout the code'}, {'type': 'logic', 'description': 'Incorrect dictionary access', 'line': 313, 'suggested_fix': 'Use the correct dictionary access method'}, {'type': 'style', 'description': 'Missing docstrings', 'line': 1, 'suggested_fix': 'Add docstrings to functions and classes'}], 'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\corrupt_codes\\\\code3.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f215555e-5cd5-46d1-86d7-738f3ed84ae9",
+        "timestamp": "2026-01-30T23:37:44.187468",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\corrupt_codes\\code3.py",
+            "output_response": "✅ No unit tests found, but code3.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "50f50354-68c8-4e03-bd63-e97d6597c48e",
+        "timestamp": "2026-02-01T20:37:05.416528",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "19e3f46a-fd73-45f0-acdf-22e944debffa",
+        "timestamp": "2026-02-01T20:37:09.851360",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\check_setup.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Inconsistent API key variable names', 'line': 15, 'suggested_fix': 'Use consistent variable names for the API key'}, {'type': 'style', 'description': 'Magic strings used in the code', 'line': None, 'suggested_fix': 'Define constants for magic strings'}, {'type': 'logic', 'description': 'No validation for the format of the API key', 'line': 25, 'suggested_fix': 'Add validation for the format of the API key'}, {'type': 'style', 'description': 'Mixed language usage in comments and print statements', 'line': None, 'suggested_fix': 'Use a consistent language throughout the code'}, {'type': 'style', 'description': 'No docstrings provided for the function', 'line': 10, 'suggested_fix': \"Add a docstring to describe the function's purpose\"}, {'type': 'logic', 'description': 'Broad exception handling may mask specific error messages', 'line': 14, 'suggested_fix': 'Handle specific exceptions instead of the general Exception class'}], 'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\check_setup.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "4fbd2c81-4c5b-4015-8980-6794a824def8",
+        "timestamp": "2026-02-01T20:37:13.108773",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\check_setup.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Inconsistent API key variable names', 'line': 15, 'suggested_fix': 'Use consistent variable names for the API key'}, {'type': 'style', 'description': 'Magic strings used in the code', 'line': None, 'suggested_fix': 'Define constants for magic strings'}, {'type': 'logic', 'description': 'No validation for the format of the API key', 'line': 25, 'suggested_fix': 'Add validation for the format of the API key'}, {'type': 'style', 'description': 'Mixed language usage in comments and print statements', 'line': None, 'suggested_fix': 'Use a consistent language throughout the code'}, {'type': 'style', 'description': 'No docstrings provided for the function', 'line': 10, 'suggested_fix': \"Add a docstring to describe the function's purpose\"}, {'type': 'logic', 'description': 'Broad exception handling may mask specific error messages', 'line': 14, 'suggested_fix': 'Handle specific exceptions instead of the general Exception class'}], 'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\check_setup.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e7422bab-d313-4182-94a0-5defc2c3a852",
+        "timestamp": "2026-02-01T20:37:13.871701",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\check_setup.py",
+            "output_response": "✅ No unit tests found, but check_setup.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "52acc387-1250-4c03-829f-3ea125a1df40",
+        "timestamp": "2026-02-01T20:37:17.459621",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\main.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Potential infinite recursion in workflow graph', 'line': None, 'suggested_fix': 'Review the workflow graph construction to prevent potential infinite recursion'}, {'type': 'style', 'description': 'Long functions and methods', 'line': None, 'suggested_fix': 'Consider breaking down long functions and methods into smaller, more manageable pieces'}, {'type': 'logic', 'description': 'Uncaught exceptions in workflow nodes', 'line': None, 'suggested_fix': 'Consider adding try-except blocks to handle potential exceptions in workflow nodes'}, {'type': 'style', 'description': 'Magic numbers and hardcoded values', 'line': None, 'suggested_fix': 'Consider defining named constants for magic numbers and hardcoded values'}, {'type': 'logic', 'description': 'Potential issues with file path handling', 'line': None, 'suggested_fix': 'Consider using absolute file paths and handling potential path-related issues'}, {'type': 'style', 'description': 'Code organization and structure', 'line': None, 'suggested_fix': 'Consider reorganizing code into separate modules or packages for better maintainability'}], 'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\main.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "67406690-f47e-4147-be7e-cc672c2e6923",
+        "timestamp": "2026-02-01T20:37:24.797898",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\main.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Potential infinite recursion in workflow graph', 'line': None, 'suggested_fix': 'Review the workflow graph construction to prevent potential infinite recursion'}, {'type': 'style', 'description': 'Long functions and methods', 'line': None, 'suggested_fix': 'Consider breaking down long functions and methods into smaller, more manageable pieces'}, {'type': 'logic', 'description': 'Uncaught exceptions in workflow nodes', 'line': None, 'suggested_fix': 'Consider adding try-except blocks to handle potential exceptions in workflow nodes'}, {'type': 'style', 'description': 'Magic numbers and hardcoded values', 'line': None, 'suggested_fix': 'Consider defining named constants for magic numbers and hardcoded values'}, {'type': 'logic', 'description': 'Potential issues with file path handling', 'line': None, 'suggested_fix': 'Consider using absolute file paths and handling potential path-related issues'}, {'type': 'style', 'description': 'Code organization and structure', 'line': None, 'suggested_fix': 'Consider reorganizing code into separate modules or packages for better maintainability'}], 'file': 'C:\\\\my projects\\\\TP IGL\\\\The-Refactoring-Swarm-YADIS\\\\main.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e1dd9a9a-756d-4ed2-9ca3-a48ad83a3877",
+        "timestamp": "2026-02-01T20:37:25.339250",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on C:\\my projects\\TP IGL\\The-Refactoring-Swarm-YADIS\\main.py",
+            "output_response": "✅ No unit tests found, but main.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
     }
 ]
