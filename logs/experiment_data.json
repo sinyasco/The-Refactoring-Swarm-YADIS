@@ -2443,5 +2443,785 @@
             "output_response": "✅ No unit tests found, but test.py has valid Python syntax."
         },
         "status": "SUCCESS"
+    },
+    {
+        "id": "9cc02c39-f2d9-465a-b6f4-8fc00641536b",
+        "timestamp": "2026-02-28T11:31:50.328420",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "8713a0e6-1b13-4dc5-b6e6-15caa761839f",
+        "timestamp": "2026-02-28T11:31:54.936065",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\test.py",
+            "output_response": "{'issues': [{'type': 'syntax', 'description': 'Invalid syntax in function definition', 'line': 1, 'suggested_fix': 'Remove the print statement from the function definition'}, {'type': 'syntax', 'description': 'Missing parameter list in function definition', 'line': 1, 'suggested_fix': 'Add a valid parameter list to the function definition'}, {'type': 'syntax', 'description': 'Invalid use of semicolon in function definition', 'line': 1, 'suggested_fix': 'Replace the semicolon with a colon'}], 'file': 'sandbox\\\\test.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "b8174221-3612-44c8-a0e6-a280625d9f1e",
+        "timestamp": "2026-02-28T11:31:57.540131",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to sandbox\\test.py",
+            "output_response": "{'issues': [{'type': 'syntax', 'description': 'Invalid syntax in function definition', 'line': 1, 'suggested_fix': 'Remove the print statement from the function definition'}, {'type': 'syntax', 'description': 'Missing parameter list in function definition', 'line': 1, 'suggested_fix': 'Add a valid parameter list to the function definition'}, {'type': 'syntax', 'description': 'Invalid use of semicolon in function definition', 'line': 1, 'suggested_fix': 'Replace the semicolon with a colon'}], 'file': 'sandbox\\\\test.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f3dd418d-aa67-4a4a-bcb0-bc4d5c2023a3",
+        "timestamp": "2026-02-28T11:31:59.024987",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on sandbox\\test.py",
+            "output_response": "✅ No unit tests found, but test.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ecaa4e96-a393-4c5d-8e0a-068800a1a559",
+        "timestamp": "2026-02-28T11:32:56.699059",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "af6a6fb1-8f92-4a5e-a80b-5498592062c4",
+        "timestamp": "2026-02-28T11:33:36.905897",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "877fa0d4-a78c-4705-84ad-ece4e61ad6ec",
+        "timestamp": "2026-02-28T11:33:40.075026",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\test.py",
+            "output_response": "{'issues': [{'type': 'syntax', 'description': 'Unbalanced parentheses', 'line': 1, 'suggested_fix': 'Check and balance the parentheses'}, {'type': 'syntax', 'description': \"Undefined variable 'hello'\", 'line': 1, 'suggested_fix': \"Define the variable 'hello' before using it\"}], 'file': 'sandbox\\\\test.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "aa037971-3108-4de0-9a25-62e2b0088f89",
+        "timestamp": "2026-02-28T11:33:42.500344",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to sandbox\\test.py",
+            "output_response": "{'issues': [{'type': 'syntax', 'description': 'Unbalanced parentheses', 'line': 1, 'suggested_fix': 'Check and balance the parentheses'}, {'type': 'syntax', 'description': \"Undefined variable 'hello'\", 'line': 1, 'suggested_fix': \"Define the variable 'hello' before using it\"}], 'file': 'sandbox\\\\test.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2a22167e-87b1-4f4a-9592-7350e0076d4a",
+        "timestamp": "2026-02-28T11:33:43.552949",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on sandbox\\test.py",
+            "output_response": "✅ No unit tests found, but test.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "903a7bbb-386a-4df7-a224-74b50b8c54c0",
+        "timestamp": "2026-02-28T11:34:11.639977",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: ./sandbox/test_local"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "16171359-0722-4ab8-872a-a3198e1fc263",
+        "timestamp": "2026-02-28T11:34:14.772609",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze ./sandbox/test_local\\test.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': \"Undefined variable 'hello'\", 'line': 1, 'suggested_fix': \"Define the variable 'hello' before using it\"}], 'file': './sandbox/test_local\\\\test.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "eccf6f39-022d-4d0e-b071-769e27e3fe2a",
+        "timestamp": "2026-02-28T11:34:17.264386",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to ./sandbox/test_local\\test.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': \"Undefined variable 'hello'\", 'line': 1, 'suggested_fix': \"Define the variable 'hello' before using it\"}], 'file': './sandbox/test_local\\\\test.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e0516954-bdc5-45c8-9a73-e456fe34ec3f",
+        "timestamp": "2026-02-28T11:34:18.267169",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on ./sandbox/test_local\\test.py",
+            "output_response": "✅ No unit tests found, but test.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "09138929-edd3-4674-8bcc-457a8fd8e4d9",
+        "timestamp": "2026-02-28T11:34:31.567338",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: ./sandbox/test_local"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "1d6708d3-966d-4815-8873-c05ba75cd094",
+        "timestamp": "2026-02-28T11:34:34.691146",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze ./sandbox/test_local\\test.py",
+            "output_response": "{'issues': [{'type': 'syntax', 'description': 'Unbalanced parentheses', 'line': 1, 'suggested_fix': 'Check and balance the parentheses'}, {'type': 'syntax', 'description': \"Undefined variable 'hello'\", 'line': 1, 'suggested_fix': \"Define the variable 'hello' before using it\"}], 'file': './sandbox/test_local\\\\test.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "33e585bc-9492-4e1a-9d92-887f04fffe93",
+        "timestamp": "2026-02-28T11:34:37.162870",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to ./sandbox/test_local\\test.py",
+            "output_response": "{'issues': [{'type': 'syntax', 'description': 'Unbalanced parentheses', 'line': 1, 'suggested_fix': 'Check and balance the parentheses'}, {'type': 'syntax', 'description': \"Undefined variable 'hello'\", 'line': 1, 'suggested_fix': \"Define the variable 'hello' before using it\"}], 'file': './sandbox/test_local\\\\test.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "fee99baf-7c1c-4e6b-ad1c-9b74f8f3f23a",
+        "timestamp": "2026-02-28T11:34:38.258074",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on ./sandbox/test_local\\test.py",
+            "output_response": "✅ No unit tests found, but test.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2368c233-b132-470c-9163-6477721460cd",
+        "timestamp": "2026-02-28T14:11:36.519657",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: ./sandbox/test_local"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "6cebc89a-56b1-4a83-a247-55db648b7de4",
+        "timestamp": "2026-02-28T14:11:40.712028",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze ./sandbox/test_local\\test.py",
+            "output_response": "{'issues': [], 'file': './sandbox/test_local\\\\test.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "fbe6820d-27e4-48e9-906c-6941839066f2",
+        "timestamp": "2026-02-28T14:11:43.153763",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to ./sandbox/test_local\\test.py",
+            "output_response": "{'issues': [], 'file': './sandbox/test_local\\\\test.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "799925fd-1287-4d9e-b68a-9178cc1d29f0",
+        "timestamp": "2026-02-28T14:11:44.411166",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on ./sandbox/test_local\\test.py",
+            "output_response": "✅ No unit tests found, but test.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "bf85712e-7e6f-4f6b-a81a-3d98190bdab5",
+        "timestamp": "2026-02-28T14:12:19.284081",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: ./sandbox/test_local"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "fadbf8fd-c56f-4dc7-bd38-407ffb747930",
+        "timestamp": "2026-02-28T14:12:22.511100",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze ./sandbox/test_local\\test.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "cff50dca-1fe0-474e-840e-07edb5343f24",
+        "timestamp": "2026-02-28T14:13:32.122292",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2e8417f0-0572-4229-a5be-cd161782bd84",
+        "timestamp": "2026-02-28T14:13:34.456094",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\test.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "993974cf-0a48-4f19-a1d4-0fd00b42f87d",
+        "timestamp": "2026-02-28T14:14:46.739316",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "52cfa14d-37e2-4a11-a2f8-87d5fc5692f1",
+        "timestamp": "2026-02-28T14:14:49.062337",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\test.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "82e84a8b-e70c-421f-8507-fa21b23c5682",
+        "timestamp": "2026-02-28T14:15:22.191307",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "9bccb834-d486-419c-82e5-d0c209c02b65",
+        "timestamp": "2026-02-28T14:15:24.524313",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\test.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "99d6c3b8-ca5f-4f8c-ac7b-0cbfd0f384f1",
+        "timestamp": "2026-02-28T14:16:01.060561",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "3c7b7012-93f0-48aa-82c5-3295edeb8c23",
+        "timestamp": "2026-02-28T14:16:03.390189",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\test.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "e11817bc-273d-4077-9462-9496c042cd7f",
+        "timestamp": "2026-02-28T14:20:57.978442",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "9fe3c3dc-dae8-45bd-96e4-2ccc97e79adc",
+        "timestamp": "2026-02-28T14:21:00.313847",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\test.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "86ecf162-fa85-46ef-9d95-8f1b686f6efa",
+        "timestamp": "2026-02-28T14:21:21.987641",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2e2edf91-58cc-4ec7-a522-089f21bdfbed",
+        "timestamp": "2026-02-28T14:21:24.310408",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\test.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "c4865f24-ac91-47f5-ac1b-fb3935bcd86b",
+        "timestamp": "2026-02-28T14:21:33.497801",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "04f96bff-c256-4de9-8324-284b78ebd126",
+        "timestamp": "2026-02-28T14:21:35.872873",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\test.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "bed06ead-72ac-443d-9a24-e5370f7102dc",
+        "timestamp": "2026-02-28T14:21:55.648342",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "bf318ab4-1f82-44c5-bed2-27126edc1740",
+        "timestamp": "2026-02-28T14:21:57.975872",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\test.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "4184c18c-f973-4c7e-a81c-f8b36c6be8db",
+        "timestamp": "2026-02-28T14:22:53.895472",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "6bf8b558-720b-4c11-9b6b-a1451a46fc51",
+        "timestamp": "2026-02-28T14:22:56.234016",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\test.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "818f2754-44ed-4798-adc7-45ccafc4f188",
+        "timestamp": "2026-02-28T14:23:01.915890",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "cf024383-543e-4bcf-afa6-097073fba9a0",
+        "timestamp": "2026-02-28T14:23:04.239908",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\test.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "997e2f9a-8870-4312-9de0-49c9195c7f35",
+        "timestamp": "2026-02-28T14:23:22.007924",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f33ba470-8e49-416b-a859-d2aa247c1ea3",
+        "timestamp": "2026-02-28T14:23:24.347497",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\ar.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "390cc0ba-e7d1-45ff-91ed-5dabe6fd761e",
+        "timestamp": "2026-02-28T14:24:42.215970",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "ea392f49-b796-4997-8559-da0edf20c074",
+        "timestamp": "2026-02-28T14:24:44.540132",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\ar.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "ea3bf049-8fa3-498d-8052-dfe87dc56ce1",
+        "timestamp": "2026-02-28T14:24:49.141401",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "655e6ff8-83b4-4976-bb47-8e97091ea302",
+        "timestamp": "2026-02-28T14:24:51.456617",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\ar.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "84829e12-f9a4-4d90-88ce-be4a0525ed91",
+        "timestamp": "2026-02-28T14:25:54.786017",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "81f5b5b5-b318-46af-88e1-994785991887",
+        "timestamp": "2026-02-28T14:25:57.129272",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\ar.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "9fbdad68-2723-4c8c-8737-c1b00ce32dfc",
+        "timestamp": "2026-02-28T14:27:28.061676",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "03fa621d-676b-4fe2-9c20-2fa4ea5830af",
+        "timestamp": "2026-02-28T14:27:30.377589",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\ar.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "b97bbf42-747b-4856-b9b3-becde1b8d3fd",
+        "timestamp": "2026-02-28T14:28:08.593015",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "4de9caa9-efe7-4f91-be03-14a43f93312d",
+        "timestamp": "2026-02-28T14:28:10.907536",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\ar.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "f6aa24ba-4c7c-49d9-8995-0ca8ba967e83",
+        "timestamp": "2026-02-28T14:30:01.298037",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "43f6f6a0-f5d4-4361-99fb-2b3b7fc52abd",
+        "timestamp": "2026-02-28T14:30:03.628917",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\ar.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "a5b88c07-d1d2-4b57-ba2b-671aecc0de91",
+        "timestamp": "2026-02-28T14:30:33.811663",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "f4055063-ba8b-4be3-8102-5bd1b35235f9",
+        "timestamp": "2026-02-28T14:30:36.212705",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\ar.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "c4cb8dbe-ffca-4aec-b17d-53875c025f29",
+        "timestamp": "2026-02-28T14:32:32.395894",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "4f259c9c-817b-4a8b-9876-d45f3d412889",
+        "timestamp": "2026-02-28T14:32:34.779206",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\ar.py",
+            "output_response": "Auditor failed: Client.__init__() got an unexpected keyword argument 'proxies'"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "ea2b9a4c-abb8-4bc5-856b-b92f5be69adf",
+        "timestamp": "2026-02-28T14:32:59.363430",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "2a3984d9-6881-4509-858c-c3243be0602a",
+        "timestamp": "2026-02-28T14:33:02.560100",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\ar.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': \"Undefined variable 'hello'\", 'line': 1, 'suggested_fix': \"Define the variable 'hello' before using it\"}], 'file': 'sandbox\\\\ar.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "fac83671-25b6-427c-968f-4a33e4397875",
+        "timestamp": "2026-02-28T14:33:05.077805",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to sandbox\\ar.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': \"Undefined variable 'hello'\", 'line': 1, 'suggested_fix': \"Define the variable 'hello' before using it\"}], 'file': 'sandbox\\\\ar.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "fa6861e8-5e49-4cb9-83d2-baac30aab45b",
+        "timestamp": "2026-02-28T14:33:06.232902",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on sandbox\\ar.py",
+            "output_response": "✅ No unit tests found, but ar.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
     }
 ]

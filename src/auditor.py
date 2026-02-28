@@ -20,7 +20,7 @@ class Auditor:
         full_prompt = f"{prompt_template}\n\nPython code to analyze:\n{code_content}"
         
         # Initialize Groq client
-        client = Groq(api_key=groq_key)
+        client = Groq()
         
         # Get response from Groq
         chat_completion = client.chat.completions.create(
