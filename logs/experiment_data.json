@@ -3319,5 +3319,497 @@
             "output_response": "✅ No unit tests found, but ar.py has valid Python syntax."
         },
         "status": "SUCCESS"
+    },
+    {
+        "id": "3d08fb2f-1719-4c08-ad84-fc35bbf08c6d",
+        "timestamp": "2026-02-28T14:35:33.437431",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: sandbox"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c1dce4fa-2283-470e-b02e-75cf3bbe50a7",
+        "timestamp": "2026-02-28T14:35:36.641949",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze sandbox\\ar.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': \"Undefined variable 'hello'\", 'line': 1, 'suggested_fix': \"Define the variable 'hello' before using it\"}], 'file': 'sandbox\\\\ar.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "c322cdbf-c773-451f-9842-b8329d72f9e5",
+        "timestamp": "2026-02-28T14:35:39.094963",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to sandbox\\ar.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': \"Undefined variable 'hello'\", 'line': 1, 'suggested_fix': \"Define the variable 'hello' before using it\"}], 'file': 'sandbox\\\\ar.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "0d77dd6c-b762-4369-a7e8-75b46c6f24f3",
+        "timestamp": "2026-02-28T14:35:40.212362",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on sandbox\\ar.py",
+            "output_response": "✅ No unit tests found, but ar.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d9a7c82a-26e7-46b3-a1a9-944afbbd1fcf",
+        "timestamp": "2026-02-28T15:49:23.472999",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: ./sandbox/test_local"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7234a96c-7a36-4532-a6a8-0829e818c46c",
+        "timestamp": "2026-02-28T15:49:26.960699",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze ./sandbox/test_local\\ar.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': \"Undefined variable 'hello'\", 'line': 1, 'suggested_fix': \"Define the variable 'hello' before using it\"}], 'file': './sandbox/test_local\\\\ar.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "935956f9-e439-484b-8697-c79389169dde",
+        "timestamp": "2026-02-28T15:49:29.407682",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to ./sandbox/test_local\\ar.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': \"Undefined variable 'hello'\", 'line': 1, 'suggested_fix': \"Define the variable 'hello' before using it\"}], 'file': './sandbox/test_local\\\\ar.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "7131ab33-6e84-491c-aee6-2df7dae49dab",
+        "timestamp": "2026-02-28T15:49:30.595248",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on ./sandbox/test_local\\ar.py",
+            "output_response": "✅ No unit tests found, but ar.py has valid Python syntax."
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e4c5196c-0fab-4dfe-b464-fd8a3f86d53f",
+        "timestamp": "2026-02-28T19:42:17.474048",
+        "agent": "System",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Startup",
+            "output_response": "Target: ./sandbox/test_local"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "9bd89ba0-e1df-49c7-b489-8be894b3c2bb",
+        "timestamp": "2026-02-28T19:42:20.593224",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze ./sandbox/test_local\\ar.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': \"Undefined variable 'hello'\", 'line': 1, 'suggested_fix': \"Define the variable 'hello' before using it\"}], 'file': './sandbox/test_local\\\\ar.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "3409c1c5-bb68-45ff-935b-22b661866086",
+        "timestamp": "2026-02-28T19:42:23.053743",
+        "agent": "Tester",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Generate tests for ./sandbox/test_local\\ar.py",
+            "output_response": "./sandbox/test_local\\test_ar.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "3075adc8-8c4a-42e2-a833-80403ff88312",
+        "timestamp": "2026-02-28T19:42:25.532494",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to ./sandbox/test_local\\ar.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': \"Undefined variable 'hello'\", 'line': 1, 'suggested_fix': \"Define the variable 'hello' before using it\"}], 'file': './sandbox/test_local\\\\ar.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "0b2ec480-e59f-4341-abdc-fe6fb90163c8",
+        "timestamp": "2026-02-28T19:42:26.823083",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on ./sandbox/test_local\\ar.py",
+            "output_response": "============================= test session starts =============================\nplatform win32 -- Python 3.11.0, pytest-7.4.4, pluggy-1.6.0 -- C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\\venv\\Scripts\\python.exe\ncachedir: .pytest_cache\nrootdir: C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\nplugins: anyio-4.12.0\ncollecting ... collected 4 items\n\nsandbox/test_local/test_ar.py::test_hello_variable_is_defined FAILED     [ 25%]\nsandbox/test_local/test_ar.py::test_hello_variable_is_assigned_a_value PASSED [ 50%]\nsandbox/test_local/test_ar.py::test_print_statement_with_undefined_variable FAILED [ 75%]\nsandbox/test_local/test_ar.py::test_print_statement_with_defined_variable PASSED [100%]\n\n================================== FAILURES ===================================\n_______________________ test_hello_variable_is_defined ________________________\n\n    def test_hello_variable_is_defined():\n        \"\"\"\n        Checks if the variable 'hello' is defined.\n    \n        This test should fail because 'hello' is not defined in the source file.\n        \"\"\"\n        try:\n            hello\n        except NameError:\n            assert True\n        else:\n>           assert False, \"Expected a NameError because 'hello' is not defined\"\nE           AssertionError: Expected a NameError because 'hello' is not defined\nE           assert False\n\nsandbox\\test_local\\test_ar.py:15: AssertionError\n________________ test_print_statement_with_undefined_variable _________________\n\n    def test_print_statement_with_undefined_variable():\n        \"\"\"\n        Checks if the print statement with an undefined variable raises an error.\n    \n        This test should pass because the print statement should raise a NameError.\n        \"\"\"\n>       with pytest.raises(NameError):\nE       Failed: DID NOT RAISE <class 'NameError'>\n\nsandbox\\test_local\\test_ar.py:36: Failed\n---------------------------- Captured stdout call -----------------------------\nHello, World!\n=========================== short test summary info ===========================\nFAILED sandbox/test_local/test_ar.py::test_hello_variable_is_defined - Assert...\nFAILED sandbox/test_local/test_ar.py::test_print_statement_with_undefined_variable\n========================= 2 failed, 2 passed in 0.16s =========================\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "b647a1a9-ebe3-4eed-a5cd-caaa1fd5b0df",
+        "timestamp": "2026-02-28T19:42:29.230486",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze ./sandbox/test_local\\ar.py",
+            "output_response": "{'issues': [], 'file': './sandbox/test_local\\\\ar.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "9823642e-c945-4103-9805-8a9a299a1856",
+        "timestamp": "2026-02-28T19:42:31.447043",
+        "agent": "Tester",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Generate tests for ./sandbox/test_local\\ar.py",
+            "output_response": "./sandbox/test_local\\test_ar.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "4dcb5c37-547e-4a77-ac1a-c120a69b54fc",
+        "timestamp": "2026-02-28T19:42:33.846537",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to ./sandbox/test_local\\ar.py",
+            "output_response": "{'issues': [], 'file': './sandbox/test_local\\\\ar.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "e1da6d99-6ff1-4d2b-878d-d0e2b032a054",
+        "timestamp": "2026-02-28T19:42:34.890289",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on ./sandbox/test_local\\ar.py",
+            "output_response": "============================= test session starts =============================\nplatform win32 -- Python 3.11.0, pytest-7.4.4, pluggy-1.6.0 -- C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\\venv\\Scripts\\python.exe\ncachedir: .pytest_cache\nrootdir: C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\nplugins: anyio-4.12.0\ncollecting ... collected 5 items\n\nsandbox/test_local/test_ar.py::test_hello_variable_exists PASSED         [ 20%]\nsandbox/test_local/test_ar.py::test_hello_variable_is_string PASSED      [ 40%]\nsandbox/test_local/test_ar.py::test_hello_variable_value PASSED          [ 60%]\nsandbox/test_local/test_ar.py::test_hello_variable_is_not_empty PASSED   [ 80%]\nsandbox/test_local/test_ar.py::test_hello_variable_prints_correctly PASSED [100%]\n\n============================== 5 passed in 0.05s ==============================\n"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "495c9674-0f64-4da3-8a5d-80c819ca6a17",
+        "timestamp": "2026-02-28T19:42:38.006603",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze ./sandbox/test_local\\lol.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Insufficient balance check does not prevent transfer', 'line': 9, 'suggested_fix': 'Add a conditional statement to prevent transfer when sender has insufficient balance'}, {'type': 'style', 'description': 'Function uses print statements for error handling', 'line': 5, 'suggested_fix': 'Consider using exceptions or a logging mechanism for error handling'}, {'type': 'style', 'description': 'Function modifies external state and has side effects', 'line': 1, 'suggested_fix': 'Consider separating concerns and using a more functional programming approach'}, {'type': 'logic', 'description': 'No validation for non-positive transfer amount', 'line': 1, 'suggested_fix': 'Add a check to prevent transfers with non-positive amounts'}], 'file': './sandbox/test_local\\\\lol.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "06f9162e-3071-470e-bedd-3f5cb3687bb7",
+        "timestamp": "2026-02-28T19:42:40.883675",
+        "agent": "Tester",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Generate tests for ./sandbox/test_local\\lol.py",
+            "output_response": "./sandbox/test_local\\test_lol.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "df1659d3-777c-494b-9fd2-6f5d285f454a",
+        "timestamp": "2026-02-28T19:42:43.615525",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to ./sandbox/test_local\\lol.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Insufficient balance check does not prevent transfer', 'line': 9, 'suggested_fix': 'Add a conditional statement to prevent transfer when sender has insufficient balance'}, {'type': 'style', 'description': 'Function uses print statements for error handling', 'line': 5, 'suggested_fix': 'Consider using exceptions or a logging mechanism for error handling'}, {'type': 'style', 'description': 'Function modifies external state and has side effects', 'line': 1, 'suggested_fix': 'Consider separating concerns and using a more functional programming approach'}, {'type': 'logic', 'description': 'No validation for non-positive transfer amount', 'line': 1, 'suggested_fix': 'Add a check to prevent transfers with non-positive amounts'}], 'file': './sandbox/test_local\\\\lol.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "86cf623d-53ef-49ea-9a54-afeb3171599a",
+        "timestamp": "2026-02-28T19:42:44.813543",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on ./sandbox/test_local\\lol.py",
+            "output_response": "============================= test session starts =============================\nplatform win32 -- Python 3.11.0, pytest-7.4.4, pluggy-1.6.0 -- C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\\venv\\Scripts\\python.exe\ncachedir: .pytest_cache\nrootdir: C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\nplugins: anyio-4.12.0\ncollecting ... collected 9 items\n\nsandbox/test_local/test_lol.py::test_transfer_money_normal_case PASSED   [ 11%]\nsandbox/test_local/test_lol.py::test_transfer_money_insufficient_balance PASSED [ 22%]\nsandbox/test_local/test_lol.py::test_transfer_money_non_positive_amount PASSED [ 33%]\nsandbox/test_local/test_lol.py::test_transfer_money_account_not_found PASSED [ 44%]\nsandbox/test_local/test_lol.py::test_transfer_money_same_account PASSED  [ 55%]\nsandbox/test_local/test_lol.py::test_transfer_money_empty_accounts PASSED [ 66%]\nsandbox/test_local/test_lol.py::test_transfer_money_negative_amount PASSED [ 77%]\nsandbox/test_local/test_lol.py::test_transfer_money_non_numeric_amount PASSED [ 88%]\nsandbox/test_local/test_lol.py::test_transfer_money_non_string_account FAILED [100%]\n\n================================== FAILURES ===================================\n___________________ test_transfer_money_non_string_account ____________________\n\n    def test_transfer_money_non_string_account():\n        \"\"\"\n        Test transfer_money with non-string account.\n        \"\"\"\n        accounts = {\"Alice\": 1000, \"Bob\": 500}\n        initial_alice_balance = accounts[\"Alice\"]\n        initial_bob_balance = accounts[\"Bob\"]\n>       with pytest.raises(TypeError):\nE       Failed: DID NOT RAISE <class 'TypeError'>\n\nsandbox\\test_local\\test_lol.py:98: Failed\n---------------------------- Captured stdout call -----------------------------\nAccount not found\n=========================== short test summary info ===========================\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_non_string_account\n========================= 1 failed, 8 passed in 0.18s =========================\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "2ca80b2e-e855-494b-846e-a7fd786c1f0d",
+        "timestamp": "2026-02-28T19:42:47.773008",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze ./sandbox/test_local\\lol.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Potential negative balance', 'line': None, 'suggested_fix': 'Consider adding a check to prevent negative balances'}, {'type': 'style', 'description': 'Function does not handle exceptions', 'line': None, 'suggested_fix': 'Consider adding try-except blocks to handle potential exceptions'}, {'type': 'style', 'description': 'Function uses print statements for error handling', 'line': None, 'suggested_fix': 'Consider using a more robust error handling mechanism, such as raising exceptions'}, {'type': 'style', 'description': 'Function modifies external state', 'line': None, 'suggested_fix': 'Consider returning the updated accounts dictionary instead of modifying it in-place'}, {'type': 'logic', 'description': 'Potential key error', 'line': None, 'suggested_fix': 'Consider adding a check to ensure that the accounts dictionary is not empty'}], 'file': './sandbox/test_local\\\\lol.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "0e8f2160-953a-4395-aec1-bc715534bc1e",
+        "timestamp": "2026-02-28T19:42:50.820678",
+        "agent": "Tester",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Generate tests for ./sandbox/test_local\\lol.py",
+            "output_response": "./sandbox/test_local\\test_lol.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "a284332a-02e7-44b7-bed8-245438b0ceff",
+        "timestamp": "2026-02-28T19:42:53.662748",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to ./sandbox/test_local\\lol.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Potential negative balance', 'line': None, 'suggested_fix': 'Consider adding a check to prevent negative balances'}, {'type': 'style', 'description': 'Function does not handle exceptions', 'line': None, 'suggested_fix': 'Consider adding try-except blocks to handle potential exceptions'}, {'type': 'style', 'description': 'Function uses print statements for error handling', 'line': None, 'suggested_fix': 'Consider using a more robust error handling mechanism, such as raising exceptions'}, {'type': 'style', 'description': 'Function modifies external state', 'line': None, 'suggested_fix': 'Consider returning the updated accounts dictionary instead of modifying it in-place'}, {'type': 'logic', 'description': 'Potential key error', 'line': None, 'suggested_fix': 'Consider adding a check to ensure that the accounts dictionary is not empty'}], 'file': './sandbox/test_local\\\\lol.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "897373a5-0ee8-4b43-870e-62355783ac5e",
+        "timestamp": "2026-02-28T19:42:55.100519",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on ./sandbox/test_local\\lol.py",
+            "output_response": "============================= test session starts =============================\nplatform win32 -- Python 3.11.0, pytest-7.4.4, pluggy-1.6.0 -- C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\\venv\\Scripts\\python.exe\ncachedir: .pytest_cache\nrootdir: C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\nplugins: anyio-4.12.0\ncollecting ... collected 8 items\n\nsandbox/test_local/test_lol.py::test_transfer_money_normal_case FAILED   [ 12%]\nsandbox/test_local/test_lol.py::test_transfer_money_invalid_amount FAILED [ 25%]\nsandbox/test_local/test_lol.py::test_transfer_money_account_not_found FAILED [ 37%]\nsandbox/test_local/test_lol.py::test_transfer_money_not_enough_balance FAILED [ 50%]\nsandbox/test_local/test_lol.py::test_transfer_money_negative_balance FAILED [ 62%]\nsandbox/test_local/test_lol.py::test_transfer_money_empty_accounts FAILED [ 75%]\nsandbox/test_local/test_lol.py::test_transfer_money_exception_handling PASSED [ 87%]\nsandbox/test_local/test_lol.py::test_transfer_money_modifies_external_state FAILED [100%]\n\n================================== FAILURES ===================================\n_______________________ test_transfer_money_normal_case _______________________\n\n    def test_transfer_money_normal_case():\n        \"\"\"\n        Test transfer_money function with a normal case.\n        \"\"\"\n        accounts = {\"Alice\": 1000, \"Bob\": 500}\n        original_stdout = sys.stdout\n        capturedOutput = io.StringIO()\n        sys.stdout = capturedOutput\n        transfer_money(accounts, \"Alice\", \"Bob\", 500)\n        sys.stdout = original_stdout\n>       assert accounts[\"Alice\"] == 500\nE       assert 1000 == 500\n\nsandbox\\test_local\\test_lol.py:16: AssertionError\n_____________________ test_transfer_money_invalid_amount ______________________\n\n    def test_transfer_money_invalid_amount():\n        \"\"\"\n        Test transfer_money function with an invalid amount (less than or equal to 0).\n        \"\"\"\n        accounts = {\"Alice\": 1000, \"Bob\": 500}\n        original_stdout = sys.stdout\n        capturedOutput = io.StringIO()\n        sys.stdout = capturedOutput\n>       transfer_money(accounts, \"Alice\", \"Bob\", 0)\n\nsandbox\\test_local\\test_lol.py:28: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\naccounts = {'Alice': 1000, 'Bob': 500}, sender = 'Alice', receiver = 'Bob'\namount = 0\n\n    def transfer_money(accounts, sender, receiver, amount):\n        if not accounts:\n            raise ValueError(\"Accounts dictionary is empty\")\n    \n        if amount <= 0:\n>           raise ValueError(\"Invalid transfer amount\")\nE           ValueError: Invalid transfer amount\n\nsandbox\\test_local\\lol.py:6: ValueError\n____________________ test_transfer_money_account_not_found ____________________\n\n    def test_transfer_money_account_not_found():\n        \"\"\"\n        Test transfer_money function with an account not found.\n        \"\"\"\n        accounts = {\"Alice\": 1000}\n        original_stdout = sys.stdout\n        capturedOutput = io.StringIO()\n        sys.stdout = capturedOutput\n>       transfer_money(accounts, \"Alice\", \"Bob\", 500)\n\nsandbox\\test_local\\test_lol.py:42: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\naccounts = {'Alice': 1000}, sender = 'Alice', receiver = 'Bob', amount = 500\n\n    def transfer_money(accounts, sender, receiver, amount):\n        if not accounts:\n            raise ValueError(\"Accounts dictionary is empty\")\n    \n        if amount <= 0:\n            raise ValueError(\"Invalid transfer amount\")\n    \n        if sender not in accounts or receiver not in accounts:\n>           raise ValueError(\"Account not found\")\nE           ValueError: Account not found\n\nsandbox\\test_local\\lol.py:9: ValueError\n___________________ test_transfer_money_not_enough_balance ____________________\n\n    def test_transfer_money_not_enough_balance():\n        \"\"\"\n        Test transfer_money function with not enough balance.\n        \"\"\"\n        accounts = {\"Alice\": 100, \"Bob\": 500}\n        original_stdout = sys.stdout\n        capturedOutput = io.StringIO()\n        sys.stdout = capturedOutput\n>       transfer_money(accounts, \"Alice\", \"Bob\", 500)\n\nsandbox\\test_local\\test_lol.py:55: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\naccounts = {'Alice': 100, 'Bob': 500}, sender = 'Alice', receiver = 'Bob'\namount = 500\n\n    def transfer_money(accounts, sender, receiver, amount):\n        if not accounts:\n            raise ValueError(\"Accounts dictionary is empty\")\n    \n        if amount <= 0:\n            raise ValueError(\"Invalid transfer amount\")\n    \n        if sender not in accounts or receiver not in accounts:\n            raise ValueError(\"Account not found\")\n    \n        if accounts[sender] < amount:\n>           raise ValueError(\"Not enough balance\")\nE           ValueError: Not enough balance\n\nsandbox\\test_local\\lol.py:12: ValueError\n____________________ test_transfer_money_negative_balance _____________________\n\n    def test_transfer_money_negative_balance():\n        \"\"\"\n        Test transfer_money function with a potential negative balance.\n        This test should fail until the bug is fixed.\n        \"\"\"\n        accounts = {\"Alice\": 100, \"Bob\": 500}\n>       transfer_money(accounts, \"Alice\", \"Bob\", 1500)\n\nsandbox\\test_local\\test_lol.py:67: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\naccounts = {'Alice': 100, 'Bob': 500}, sender = 'Alice', receiver = 'Bob'\namount = 1500\n\n    def transfer_money(accounts, sender, receiver, amount):\n        if not accounts:\n            raise ValueError(\"Accounts dictionary is empty\")\n    \n        if amount <= 0:\n            raise ValueError(\"Invalid transfer amount\")\n    \n        if sender not in accounts or receiver not in accounts:\n            raise ValueError(\"Account not found\")\n    \n        if accounts[sender] < amount:\n>           raise ValueError(\"Not enough balance\")\nE           ValueError: Not enough balance\n\nsandbox\\test_local\\lol.py:12: ValueError\n_____________________ test_transfer_money_empty_accounts ______________________\n\n    def test_transfer_money_empty_accounts():\n        \"\"\"\n        Test transfer_money function with an empty accounts dictionary.\n        This test should fail until the bug is fixed.\n        \"\"\"\n        accounts = {}\n        with pytest.raises(KeyError):\n>           transfer_money(accounts, \"Alice\", \"Bob\", 500)\n\nsandbox\\test_local\\test_lol.py:78: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\naccounts = {}, sender = 'Alice', receiver = 'Bob', amount = 500\n\n    def transfer_money(accounts, sender, receiver, amount):\n        if not accounts:\n>           raise ValueError(\"Accounts dictionary is empty\")\nE           ValueError: Accounts dictionary is empty\n\nsandbox\\test_local\\lol.py:3: ValueError\n_________________ test_transfer_money_modifies_external_state _________________\n\n    def test_transfer_money_modifies_external_state():\n        \"\"\"\n        Test transfer_money function modifies external state.\n        This test should pass, but it's not a good practice.\n        \"\"\"\n        accounts = {\"Alice\": 1000, \"Bob\": 500}\n        original_accounts = accounts.copy()\n        transfer_money(accounts, \"Alice\", \"Bob\", 500)\n>       assert accounts != original_accounts\nE       AssertionError: assert {'Alice': 1000, 'Bob': 500} != {'Alice': 1000, 'Bob': 500}\n\nsandbox\\test_local\\test_lol.py:97: AssertionError\n=========================== short test summary info ===========================\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_normal_case - asse...\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_invalid_amount - V...\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_account_not_found\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_not_enough_balance\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_negative_balance\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_empty_accounts - V...\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_modifies_external_state\n========================= 7 failed, 1 passed in 0.22s =========================\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "389cb0e3-b9cc-4a59-8248-979aeca19bc7",
+        "timestamp": "2026-02-28T19:42:58.322911",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze ./sandbox/test_local\\lol.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Potential negative balance check is redundant', 'line': 17, 'suggested_fix': \"Remove the redundant check as it is already handled by the 'Not enough balance' check\"}, {'type': 'style', 'description': 'Broad exception handling', 'line': 19, 'suggested_fix': 'Handle specific exceptions instead of catching the general Exception class'}, {'type': 'style', 'description': 'Error message includes the string representation of the exception', 'line': 21, 'suggested_fix': 'Provide a more informative error message without including the exception details'}, {'type': 'style', 'description': 'Function does not handle non-numeric amount values', 'line': 5, 'suggested_fix': 'Add a check to ensure the amount is a numeric value'}, {'type': 'style', 'description': 'Function does not handle non-dictionary accounts', 'line': 3, 'suggested_fix': 'Add a check to ensure the accounts is a dictionary'}], 'file': './sandbox/test_local\\\\lol.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "fca49230-cdb2-417e-a24c-1c84f030bda7",
+        "timestamp": "2026-02-28T19:43:01.131037",
+        "agent": "Tester",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Generate tests for ./sandbox/test_local\\lol.py",
+            "output_response": "./sandbox/test_local\\test_lol.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d9dac96a-91b8-4944-b822-e5bde344edec",
+        "timestamp": "2026-02-28T19:43:04.089949",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to ./sandbox/test_local\\lol.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Potential negative balance check is redundant', 'line': 17, 'suggested_fix': \"Remove the redundant check as it is already handled by the 'Not enough balance' check\"}, {'type': 'style', 'description': 'Broad exception handling', 'line': 19, 'suggested_fix': 'Handle specific exceptions instead of catching the general Exception class'}, {'type': 'style', 'description': 'Error message includes the string representation of the exception', 'line': 21, 'suggested_fix': 'Provide a more informative error message without including the exception details'}, {'type': 'style', 'description': 'Function does not handle non-numeric amount values', 'line': 5, 'suggested_fix': 'Add a check to ensure the amount is a numeric value'}, {'type': 'style', 'description': 'Function does not handle non-dictionary accounts', 'line': 3, 'suggested_fix': 'Add a check to ensure the accounts is a dictionary'}], 'file': './sandbox/test_local\\\\lol.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "9ac2c883-e82a-4bab-8347-a6f2757f6782",
+        "timestamp": "2026-02-28T19:43:05.370805",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on ./sandbox/test_local\\lol.py",
+            "output_response": "============================= test session starts =============================\nplatform win32 -- Python 3.11.0, pytest-7.4.4, pluggy-1.6.0 -- C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\\venv\\Scripts\\python.exe\ncachedir: .pytest_cache\nrootdir: C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\nplugins: anyio-4.12.0\ncollecting ... collected 10 items\n\nsandbox/test_local/test_lol.py::test_transfer_money_valid_transfer PASSED [ 10%]\nsandbox/test_local/test_lol.py::test_transfer_money_empty_accounts PASSED [ 20%]\nsandbox/test_local/test_lol.py::test_transfer_money_invalid_amount PASSED [ 30%]\nsandbox/test_local/test_lol.py::test_transfer_money_account_not_found PASSED [ 40%]\nsandbox/test_local/test_lol.py::test_transfer_money_insufficient_balance PASSED [ 50%]\nsandbox/test_local/test_lol.py::test_transfer_money_non_numeric_amount FAILED [ 60%]\nsandbox/test_local/test_lol.py::test_transfer_money_non_dictionary_accounts FAILED [ 70%]\nsandbox/test_local/test_lol.py::test_transfer_money_potential_negative_balance PASSED [ 80%]\nsandbox/test_local/test_lol.py::test_transfer_money_broad_exception_handling PASSED [ 90%]\nsandbox/test_local/test_lol.py::test_transfer_money_error_message_includes_exception_details FAILED [100%]\n\n================================== FAILURES ===================================\n___________________ test_transfer_money_non_numeric_amount ____________________\n\n    def test_transfer_money_non_numeric_amount():\n        \"\"\"\n        Test transfer with a non-numeric amount.\n        \"\"\"\n        accounts = {\n            \"Alice\": 1000,\n            \"Bob\": 500\n        }\n        with pytest.raises(TypeError):\n>           transfer_money(accounts, \"Alice\", \"Bob\", \"five hundred\")\n\nsandbox\\test_local\\test_lol.py:65: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\naccounts = {'Alice': 1000, 'Bob': 500}, sender = 'Alice', receiver = 'Bob'\namount = 'five hundred'\n\n    def transfer_money(accounts, sender, receiver, amount):\n        if not isinstance(accounts, dict):\n            raise ValueError(\"Accounts must be a dictionary\")\n    \n        if not accounts:\n            raise ValueError(\"Accounts dictionary is empty\")\n    \n        if not isinstance(amount, (int, float)):\n>           raise ValueError(\"Invalid transfer amount\")\nE           ValueError: Invalid transfer amount\n\nsandbox\\test_local\\lol.py:9: ValueError\n_________________ test_transfer_money_non_dictionary_accounts _________________\n\n    def test_transfer_money_non_dictionary_accounts():\n        \"\"\"\n        Test transfer with non-dictionary accounts.\n        \"\"\"\n        accounts = \"not a dictionary\"\n        with pytest.raises(AttributeError):\n>           transfer_money(accounts, \"Alice\", \"Bob\", 500)\n\nsandbox\\test_local\\test_lol.py:73: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\naccounts = 'not a dictionary', sender = 'Alice', receiver = 'Bob', amount = 500\n\n    def transfer_money(accounts, sender, receiver, amount):\n        if not isinstance(accounts, dict):\n>           raise ValueError(\"Accounts must be a dictionary\")\nE           ValueError: Accounts must be a dictionary\n\nsandbox\\test_local\\lol.py:3: ValueError\n________ test_transfer_money_error_message_includes_exception_details _________\n\n    def test_transfer_money_error_message_includes_exception_details():\n        \"\"\"\n        Test that the function raises a ValueError with an informative error message.\n        \"\"\"\n        accounts = {\n            \"Alice\": 1000,\n            \"Bob\": 500\n        }\n        try:\n>           transfer_money(accounts, \"Alice\", \"Bob\", float('inf'))\n\nsandbox\\test_local\\test_lol.py:106: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\naccounts = {'Alice': 1000, 'Bob': 500}, sender = 'Alice', receiver = 'Bob'\namount = inf\n\n    def transfer_money(accounts, sender, receiver, amount):\n        if not isinstance(accounts, dict):\n            raise ValueError(\"Accounts must be a dictionary\")\n    \n        if not accounts:\n            raise ValueError(\"Accounts dictionary is empty\")\n    \n        if not isinstance(amount, (int, float)):\n            raise ValueError(\"Invalid transfer amount\")\n    \n        if amount <= 0:\n            raise ValueError(\"Invalid transfer amount\")\n    \n        if sender not in accounts or receiver not in accounts:\n            raise ValueError(\"Account not found\")\n    \n        if accounts[sender] < amount:\n>           raise ValueError(\"Not enough balance\")\nE           ValueError: Not enough balance\n\nsandbox\\test_local\\lol.py:18: ValueError\n\nDuring handling of the above exception, another exception occurred:\n\n    def test_transfer_money_error_message_includes_exception_details():\n        \"\"\"\n        Test that the function raises a ValueError with an informative error message.\n        \"\"\"\n        accounts = {\n            \"Alice\": 1000,\n            \"Bob\": 500\n        }\n        try:\n            transfer_money(accounts, \"Alice\", \"Bob\", float('inf'))\n        except ValueError as e:\n>           assert \"An error occurred\" in str(e)\nE           AssertionError: assert 'An error occurred' in 'Not enough balance'\nE            +  where 'Not enough balance' = str(ValueError('Not enough balance'))\n\nsandbox\\test_local\\test_lol.py:108: AssertionError\n=========================== short test summary info ===========================\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_non_numeric_amount\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_non_dictionary_accounts\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_error_message_includes_exception_details\n========================= 3 failed, 7 passed in 0.20s =========================\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "9c1846c9-83b5-42b6-a2b8-15f492df4e89",
+        "timestamp": "2026-02-28T19:43:08.435224",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze ./sandbox/test_local\\lol.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Potential KeyError when accessing accounts dictionary', 'line': 15, 'suggested_fix': 'Consider adding error handling for KeyError'}, {'type': 'style', 'description': 'Broad exception handling may mask specific error details', 'line': 23, 'suggested_fix': 'Consider handling specific exceptions instead of general Exception'}, {'type': 'style', 'description': 'Error messages are not descriptive', 'line': 25, 'suggested_fix': 'Consider including more details in error messages'}, {'type': 'style', 'description': 'Function does not handle non-numeric account values', 'line': 5, 'suggested_fix': 'Consider adding input validation for account values'}, {'type': 'style', 'description': 'Function modifies external state indirectly through return value', 'line': 19, 'suggested_fix': 'Consider using a more explicit approach to state modification'}], 'file': './sandbox/test_local\\\\lol.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "a1c0a805-40f1-451c-9b22-90100ce10e4d",
+        "timestamp": "2026-02-28T19:43:11.451394",
+        "agent": "Tester",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Generate tests for ./sandbox/test_local\\lol.py",
+            "output_response": "./sandbox/test_local\\test_lol.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "03905f7b-3a8c-4ca2-b9bf-947be5578b05",
+        "timestamp": "2026-02-28T19:43:14.495211",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to ./sandbox/test_local\\lol.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Potential KeyError when accessing accounts dictionary', 'line': 15, 'suggested_fix': 'Consider adding error handling for KeyError'}, {'type': 'style', 'description': 'Broad exception handling may mask specific error details', 'line': 23, 'suggested_fix': 'Consider handling specific exceptions instead of general Exception'}, {'type': 'style', 'description': 'Error messages are not descriptive', 'line': 25, 'suggested_fix': 'Consider including more details in error messages'}, {'type': 'style', 'description': 'Function does not handle non-numeric account values', 'line': 5, 'suggested_fix': 'Consider adding input validation for account values'}, {'type': 'style', 'description': 'Function modifies external state indirectly through return value', 'line': 19, 'suggested_fix': 'Consider using a more explicit approach to state modification'}], 'file': './sandbox/test_local\\\\lol.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "a611e4be-e646-4c75-847f-88943666a6e0",
+        "timestamp": "2026-02-28T19:43:15.737667",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on ./sandbox/test_local\\lol.py",
+            "output_response": "============================= test session starts =============================\nplatform win32 -- Python 3.11.0, pytest-7.4.4, pluggy-1.6.0 -- C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\\venv\\Scripts\\python.exe\ncachedir: .pytest_cache\nrootdir: C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\nplugins: anyio-4.12.0\ncollecting ... collected 11 items\n\nsandbox/test_local/test_lol.py::test_transfer_money_normal_case PASSED   [  9%]\nsandbox/test_local/test_lol.py::test_transfer_money_invalid_accounts_type FAILED [ 18%]\nsandbox/test_local/test_lol.py::test_transfer_money_empty_accounts FAILED [ 27%]\nsandbox/test_local/test_lol.py::test_transfer_money_invalid_amount_type FAILED [ 36%]\nsandbox/test_local/test_lol.py::test_transfer_money_invalid_amount_value FAILED [ 45%]\nsandbox/test_local/test_lol.py::test_transfer_money_account_not_found FAILED [ 54%]\nsandbox/test_local/test_lol.py::test_transfer_money_insufficient_balance FAILED [ 63%]\nsandbox/test_local/test_lol.py::test_transfer_money_type_error FAILED    [ 72%]\nsandbox/test_local/test_lol.py::test_transfer_money_general_error FAILED [ 81%]\nsandbox/test_local/test_lol.py::test_transfer_money_key_error FAILED     [ 90%]\nsandbox/test_local/test_lol.py::test_transfer_money_non_numeric_account_values FAILED [100%]\n\n================================== FAILURES ===================================\n__________________ test_transfer_money_invalid_accounts_type __________________\n\n    def test_transfer_money_invalid_accounts_type():\n        \"\"\"\n        Test transfer_money function with invalid accounts type.\n        \"\"\"\n        accounts = \"not a dictionary\"\n        sender = \"Alice\"\n        receiver = \"Bob\"\n        amount = 500\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:22: NameError\n_____________________ test_transfer_money_empty_accounts ______________________\n\n    def test_transfer_money_empty_accounts():\n        \"\"\"\n        Test transfer_money function with empty accounts dictionary.\n        \"\"\"\n        accounts = {}\n        sender = \"Alice\"\n        receiver = \"Bob\"\n        amount = 500\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:33: NameError\n___________________ test_transfer_money_invalid_amount_type ___________________\n\n    def test_transfer_money_invalid_amount_type():\n        \"\"\"\n        Test transfer_money function with invalid amount type.\n        \"\"\"\n        accounts = {\"Alice\": 1000, \"Bob\": 500}\n        sender = \"Alice\"\n        receiver = \"Bob\"\n        amount = \"not a number\"\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:44: NameError\n__________________ test_transfer_money_invalid_amount_value ___________________\n\n    def test_transfer_money_invalid_amount_value():\n        \"\"\"\n        Test transfer_money function with invalid amount value.\n        \"\"\"\n        accounts = {\"Alice\": 1000, \"Bob\": 500}\n        sender = \"Alice\"\n        receiver = \"Bob\"\n        amount = 0\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:55: NameError\n____________________ test_transfer_money_account_not_found ____________________\n\n    def test_transfer_money_account_not_found():\n        \"\"\"\n        Test transfer_money function with account not found.\n        \"\"\"\n        accounts = {\"Alice\": 1000}\n        sender = \"Alice\"\n        receiver = \"Bob\"\n        amount = 500\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:66: NameError\n__________________ test_transfer_money_insufficient_balance ___________________\n\n    def test_transfer_money_insufficient_balance():\n        \"\"\"\n        Test transfer_money function with insufficient balance.\n        \"\"\"\n        accounts = {\"Alice\": 100, \"Bob\": 500}\n        sender = \"Alice\"\n        receiver = \"Bob\"\n        amount = 500\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:77: NameError\n_______________________ test_transfer_money_type_error ________________________\n\n    def test_transfer_money_type_error():\n        \"\"\"\n        Test transfer_money function with type error during transfer.\n        \"\"\"\n        accounts = {\"Alice\": \"not a number\", \"Bob\": 500}\n        sender = \"Alice\"\n        receiver = \"Bob\"\n        amount = 500\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:88: NameError\n______________________ test_transfer_money_general_error ______________________\n\n    def test_transfer_money_general_error():\n        \"\"\"\n        Test transfer_money function with general error during transfer.\n        \"\"\"\n        accounts = {\"Alice\": 1000, \"Bob\": 500}\n        sender = \"Alice\"\n        receiver = \"Bob\"\n        amount = 500\n        # Simulate an error during transfer\n        def mock_transfer_money(accounts, sender, receiver, amount):\n            raise Exception(\"Mock error\")\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:102: NameError\n________________________ test_transfer_money_key_error ________________________\n\n    def test_transfer_money_key_error():\n        \"\"\"\n        Test transfer_money function with key error during transfer.\n        \"\"\"\n        accounts = {\"Alice\": 1000}\n        sender = \"Alice\"\n        receiver = \"Bob\"\n        amount = 500\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:113: NameError\n_______________ test_transfer_money_non_numeric_account_values ________________\n\n    def test_transfer_money_non_numeric_account_values():\n        \"\"\"\n        Test transfer_money function with non-numeric account values.\n        \"\"\"\n        accounts = {\"Alice\": \"not a number\", \"Bob\": 500}\n        sender = \"Alice\"\n        receiver = \"Bob\"\n        amount = 500\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:124: NameError\n=========================== short test summary info ===========================\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_invalid_accounts_type\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_empty_accounts - N...\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_invalid_amount_type\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_invalid_amount_value\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_account_not_found\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_insufficient_balance\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_type_error - NameE...\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_general_error - Na...\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_key_error - NameEr...\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_non_numeric_account_values\n======================== 10 failed, 1 passed in 0.25s =========================\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "059ff314-edc3-4969-9228-a758ef644a78",
+        "timestamp": "2026-02-28T19:43:18.992424",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze ./sandbox/test_local\\lol.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Redundant try-except block for KeyError', 'line': 23, 'suggested_fix': 'Remove redundant try-except block'}, {'type': 'logic', 'description': 'Redundant try-except block for TypeError and Exception', 'line': 29, 'suggested_fix': 'Remove redundant try-except block'}, {'type': 'style', 'description': 'Function does not handle potential exceptions when creating a copy of the accounts dictionary', 'line': 25, 'suggested_fix': 'Consider adding error handling for dictionary copy operation'}, {'type': 'style', 'description': 'Error messages do not provide detailed information about the error', 'line': None, 'suggested_fix': 'Improve error messages to provide more context'}, {'type': 'style', 'description': 'Function modifies a copy of the input dictionary but does not indicate this in its name or documentation', 'line': None, 'suggested_fix': 'Consider renaming the function to indicate its behavior'}], 'file': './sandbox/test_local\\\\lol.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "09445d19-ca63-4d85-afe7-0ebae5ea0951",
+        "timestamp": "2026-02-28T19:43:22.243727",
+        "agent": "Tester",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Generate tests for ./sandbox/test_local\\lol.py",
+            "output_response": "./sandbox/test_local\\test_lol.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "94e5c4b4-b446-46e2-ba13-b246607fb7fd",
+        "timestamp": "2026-02-28T19:43:25.361833",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to ./sandbox/test_local\\lol.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Redundant try-except block for KeyError', 'line': 23, 'suggested_fix': 'Remove redundant try-except block'}, {'type': 'logic', 'description': 'Redundant try-except block for TypeError and Exception', 'line': 29, 'suggested_fix': 'Remove redundant try-except block'}, {'type': 'style', 'description': 'Function does not handle potential exceptions when creating a copy of the accounts dictionary', 'line': 25, 'suggested_fix': 'Consider adding error handling for dictionary copy operation'}, {'type': 'style', 'description': 'Error messages do not provide detailed information about the error', 'line': None, 'suggested_fix': 'Improve error messages to provide more context'}, {'type': 'style', 'description': 'Function modifies a copy of the input dictionary but does not indicate this in its name or documentation', 'line': None, 'suggested_fix': 'Consider renaming the function to indicate its behavior'}], 'file': './sandbox/test_local\\\\lol.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "d340dd54-2357-48fa-a388-22ddbff15519",
+        "timestamp": "2026-02-28T19:43:26.633146",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on ./sandbox/test_local\\lol.py",
+            "output_response": "============================= test session starts =============================\nplatform win32 -- Python 3.11.0, pytest-7.4.4, pluggy-1.6.0 -- C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\\venv\\Scripts\\python.exe\ncachedir: .pytest_cache\nrootdir: C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\nplugins: anyio-4.12.0\ncollecting ... collected 12 items\n\nsandbox/test_local/test_lol.py::test_transfer_money_valid_transfer PASSED [  8%]\nsandbox/test_local/test_lol.py::test_transfer_money_invalid_accounts_type FAILED [ 16%]\nsandbox/test_local/test_lol.py::test_transfer_money_empty_accounts FAILED [ 25%]\nsandbox/test_local/test_lol.py::test_transfer_money_invalid_amount_type FAILED [ 33%]\nsandbox/test_local/test_lol.py::test_transfer_money_invalid_amount_value FAILED [ 41%]\nsandbox/test_local/test_lol.py::test_transfer_money_account_not_found FAILED [ 50%]\nsandbox/test_local/test_lol.py::test_transfer_money_non_numeric_balance FAILED [ 58%]\nsandbox/test_local/test_lol.py::test_transfer_money_insufficient_balance FAILED [ 66%]\nsandbox/test_local/test_lol.py::test_transfer_money_redundant_try_except_block PASSED [ 75%]\nsandbox/test_local/test_lol.py::test_transfer_money_redundant_try_except_block_type_error PASSED [ 83%]\nsandbox/test_local/test_lol.py::test_transfer_money_redundant_try_except_block_exception PASSED [ 91%]\nsandbox/test_local/test_lol.py::test_transfer_money_dictionary_copy PASSED [100%]\n\n================================== FAILURES ===================================\n__________________ test_transfer_money_invalid_accounts_type __________________\n\n    def test_transfer_money_invalid_accounts_type():\n        \"\"\"\n        Test that a ValueError is raised when accounts is not a dictionary.\n        \"\"\"\n        accounts = \"not a dictionary\"\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:20: NameError\n_____________________ test_transfer_money_empty_accounts ______________________\n\n    def test_transfer_money_empty_accounts():\n        \"\"\"\n        Test that a ValueError is raised when accounts is an empty dictionary.\n        \"\"\"\n        accounts = {}\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:28: NameError\n___________________ test_transfer_money_invalid_amount_type ___________________\n\n    def test_transfer_money_invalid_amount_type():\n        \"\"\"\n        Test that a ValueError is raised when amount is not a number.\n        \"\"\"\n        accounts = {\n            \"Alice\": 1000,\n            \"Bob\": 500\n        }\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:39: NameError\n__________________ test_transfer_money_invalid_amount_value ___________________\n\n    def test_transfer_money_invalid_amount_value():\n        \"\"\"\n        Test that a ValueError is raised when amount is less than or equal to 0.\n        \"\"\"\n        accounts = {\n            \"Alice\": 1000,\n            \"Bob\": 500\n        }\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:50: NameError\n____________________ test_transfer_money_account_not_found ____________________\n\n    def test_transfer_money_account_not_found():\n        \"\"\"\n        Test that a ValueError is raised when sender or receiver is not in accounts.\n        \"\"\"\n        accounts = {\n            \"Alice\": 1000,\n            \"Bob\": 500\n        }\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:63: NameError\n___________________ test_transfer_money_non_numeric_balance ___________________\n\n    def test_transfer_money_non_numeric_balance():\n        \"\"\"\n        Test that a ValueError is raised when account balance is not numeric.\n        \"\"\"\n        accounts = {\n            \"Alice\": \"not a number\",\n            \"Bob\": 500\n        }\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:76: NameError\n__________________ test_transfer_money_insufficient_balance ___________________\n\n    def test_transfer_money_insufficient_balance():\n        \"\"\"\n        Test that a ValueError is raised when sender has insufficient balance.\n        \"\"\"\n        accounts = {\n            \"Alice\": 100,\n            \"Bob\": 500\n        }\n>       with pytest.raises(ValueError):\nE       NameError: name 'pytest' is not defined\n\nsandbox\\test_local\\test_lol.py:87: NameError\n=========================== short test summary info ===========================\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_invalid_accounts_type\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_empty_accounts - N...\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_invalid_amount_type\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_invalid_amount_value\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_account_not_found\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_non_numeric_balance\nFAILED sandbox/test_local/test_lol.py::test_transfer_money_insufficient_balance\n========================= 7 failed, 5 passed in 0.22s =========================\n"
+        },
+        "status": "FAILURE"
+    },
+    {
+        "id": "a2cf918f-13da-419a-b9be-145857e73455",
+        "timestamp": "2026-02-28T19:43:29.838471",
+        "agent": "Auditor",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Analyze ./sandbox/test_local\\lol.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Potential KeyError when accessing account balances', 'line': 15, 'suggested_fix': 'Add checks for account balance existence before accessing'}, {'type': 'style', 'description': 'Redundant try-except block for dictionary copy operation', 'line': 24, 'suggested_fix': 'Remove unnecessary try-except block'}, {'type': 'style', 'description': 'Inconsistent error handling, using both ValueError and Exception', 'line': None, 'suggested_fix': 'Use consistent error handling throughout the function'}, {'type': 'style', 'description': 'Function does not handle non-string account names', 'line': None, 'suggested_fix': 'Add input validation for account names'}, {'type': 'style', 'description': 'Function modifies account balances but does not update the original dictionary', 'line': None, 'suggested_fix': 'Consider updating the original dictionary or returning a new one with clear documentation'}], 'file': './sandbox/test_local\\\\lol.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "84e438bf-d4c9-4d94-8b53-86834dae684f",
+        "timestamp": "2026-02-28T19:43:33.646093",
+        "agent": "Tester",
+        "model": "Groq",
+        "action": "CODE_ANALYSIS",
+        "details": {
+            "input_prompt": "Generate tests for ./sandbox/test_local\\lol.py",
+            "output_response": "./sandbox/test_local\\test_lol.py"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "73539071-cbb9-40e7-88d8-7efd2c6a9df4",
+        "timestamp": "2026-02-28T19:43:37.014121",
+        "agent": "Fixer",
+        "model": "Groq",
+        "action": "FIX",
+        "details": {
+            "input_prompt": "Apply plan to ./sandbox/test_local\\lol.py",
+            "output_response": "{'issues': [{'type': 'logic', 'description': 'Potential KeyError when accessing account balances', 'line': 15, 'suggested_fix': 'Add checks for account balance existence before accessing'}, {'type': 'style', 'description': 'Redundant try-except block for dictionary copy operation', 'line': 24, 'suggested_fix': 'Remove unnecessary try-except block'}, {'type': 'style', 'description': 'Inconsistent error handling, using both ValueError and Exception', 'line': None, 'suggested_fix': 'Use consistent error handling throughout the function'}, {'type': 'style', 'description': 'Function does not handle non-string account names', 'line': None, 'suggested_fix': 'Add input validation for account names'}, {'type': 'style', 'description': 'Function modifies account balances but does not update the original dictionary', 'line': None, 'suggested_fix': 'Consider updating the original dictionary or returning a new one with clear documentation'}], 'file': './sandbox/test_local\\\\lol.py'}"
+        },
+        "status": "SUCCESS"
+    },
+    {
+        "id": "4ae0bca3-7cfd-4593-b81d-b0e684bd6ca4",
+        "timestamp": "2026-02-28T19:43:38.044534",
+        "agent": "Judge",
+        "model": "None",
+        "action": "DEBUG",
+        "details": {
+            "input_prompt": "Run tests on ./sandbox/test_local\\lol.py",
+            "output_response": "============================= test session starts =============================\nplatform win32 -- Python 3.11.0, pytest-7.4.4, pluggy-1.6.0 -- C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\\venv\\Scripts\\python.exe\ncachedir: .pytest_cache\nrootdir: C:\\Users\\ny_zi\\Desktop\\IGL\\refactoring-swarm-template\nplugins: anyio-4.12.0\ncollecting ... collected 13 items\n\nsandbox/test_local/test_lol.py::test_transfer_money_normal_case PASSED   [  7%]\nsandbox/test_local/test_lol.py::test_transfer_money_invalid_accounts_type PASSED [ 15%]\nsandbox/test_local/test_lol.py::test_transfer_money_empty_accounts PASSED [ 23%]\nsandbox/test_local/test_lol.py::test_transfer_money_invalid_amount_type PASSED [ 30%]\nsandbox/test_local/test_lol.py::test_transfer_money_invalid_amount_value PASSED [ 38%]\nsandbox/test_local/test_lol.py::test_transfer_money_account_not_found PASSED [ 46%]\nsandbox/test_local/test_lol.py::test_transfer_money_non_numeric_balance PASSED [ 53%]\nsandbox/test_local/test_lol.py::test_transfer_money_insufficient_balance PASSED [ 61%]\nsandbox/test_local/test_lol.py::test_transfer_money_redundant_try_except_block PASSED [ 69%]\nsandbox/test_local/test_lol.py::test_transfer_money_inconsistent_error_handling PASSED [ 76%]\nsandbox/test_local/test_lol.py::test_transfer_money_non_string_account_name PASSED [ 84%]\nsandbox/test_local/test_lol.py::test_transfer_money_modifies_account_balances PASSED [ 92%]\nsandbox/test_local/test_lol.py::test_transfer_money_potential_key_error PASSED [100%]\n\n============================= 13 passed in 0.05s ==============================\n"
+        },
+        "status": "SUCCESS"
     }
 ]
