@@ -3,7 +3,7 @@
 > An autonomous multi-agent LLM system that audits, repairs, and validates messy Python code — no human intervention required.
 
 ![Python](https://img.shields.io/badge/Python-3.10%2F3.11-blue?logo=python)
-![GROQ](https://img.shields.io/badge/Powered%20by-GROQ-orange?logo=google)
+![Groq](https://img.shields.io/badge/Powered%20by-Groq-F55036?logo=groq)
 ![ESI](https://img.shields.io/badge/ESI-IGL%20Lab%202025--2026-green)
 
 ---
