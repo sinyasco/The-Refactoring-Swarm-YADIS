@@ -112,7 +112,7 @@ cp .env.example .env
 
 Edit `.env` and add your key:
 ```
-GOOGLE_API_KEY=AIzaSy...
+GROQ_API_KEY="your key"
 ```
 
 > ⚠️ Never commit your `.env` file.
